@@ -9,7 +9,6 @@
     --black01: hsl(0, 3%, 6%);
     --black02: hsl(0, 3%, 26%);
     --black03: hsl(0, 3%, 34%);
-    --black04: hsl(0, 35%, 74%);
     --accent01: hsl(346, 80%, 33%);
     --blue-light: hsl(208, 49%, 50%);
     --blue-dark: hsl(212, 60%, 32%);
@@ -31,7 +30,6 @@
     --background-primary-default: var(--white01);
     --background-secondary-default: var(--white02);
     --background-secondary-hover: var(--white03);
-    --background-tertiary-default: var(--black04);
     --background-accent-default: var(--accent01);
 
     /*border*/
