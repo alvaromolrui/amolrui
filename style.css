@@ -9,7 +9,8 @@
     --black01: hsl(0, 3%, 6%);
     --black02: hsl(0, 3%, 26%);
     --black03: hsl(0, 3%, 34%);
-    --accent: hsl(346, 80%, 33%);
+    --black04: hsl(0, 35%, 74%);
+    --accent01: hsl(346, 80%, 33%);
     --blue-light: hsl(208, 49%, 50%);
     --blue-dark: hsl(212, 60%, 32%);
 
@@ -18,7 +19,7 @@
     --content-secondary-default: var(--black03);
     --content-tertiary-default: var(--white01);
     --content-quaternary-default: var(--black02);
-    --content-accent-default: var(--accent);
+    --content-accent-default: var(--accent01);
     --content-action-default: var(--black01);
     --content-action-hover: var(--black01);
 
@@ -31,11 +32,13 @@
     --background-primary-default: var(--white01);
     --background-secondary-default: var(--white02);
     --background-secondary-hover: var(--white03);
-    --background-accent-default: var(--accent);
+    --background-tertiary-default: var(--black04);
+    --background-accent-default: var(--accent01);
 
     /*border*/
     --border-primary-default: var(--white04);
     --border-secondary-default: var(--white03);
+    --border-accent-default: var(--accent01);
 
     /*weight*/
     --regular: 400;
@@ -49,7 +52,8 @@
     --small: 0.875rem;
 
     /*line*/
-    --line: 0.125rem solid var(--border-primary-default);
+    --base-line: 0.125rem solid var(--border-primary-default);
+    --thin-line: 0.0625rem solid var(--border-primary-default);
 }
 
 * {
@@ -125,7 +129,7 @@ b {
 a {
     font-size: inherit;
     color: var(--content-link-default);
-    outline: var(--line);
+    outline: var(--base-line);
     outline-color: transparent;
     white-space: nowrap;
     border-radius: 0.25rem;
@@ -143,13 +147,13 @@ a {
   }
 
 a:focus {
-    outline: var(--line);
+    outline: var(--base-line);
     outline-color: var(--content-link-default);
 
 }
 
 a:focus-visible {
-    outline: var(--line);
+    outline: var(--base-line);
     outline-color: var(--content-link-default);
 }
 
@@ -178,7 +182,7 @@ header, main, footer {
 
 header {
     padding: 2rem 0rem 2.5rem 0rem;
-    border-bottom: var(--line);
+    border-bottom: var(--base-line);
 }
 
 main {
@@ -200,7 +204,7 @@ article, section {
 
 article {
     padding: 2rem 0rem 2.5rem 0rem;
-    border-bottom: var(--line);
+    border-bottom: var(--base-line);
 }
 
 section {
@@ -227,10 +231,12 @@ section {
 
 mark {
     padding: 0.125rem 0.5rem; 
-    background: var(--background-accent-default);
-    border-radius: 0.5rem;
+    background: none;
+    border: var(--thin-line);
+    border-color: var(--border-accent-default);
+    border-radius: 0.25rem;
     font-size: var(--small);
-    color: var(--content-tertiary-default);
+    color: var(--content-accent-default);
     white-space: nowrap;
 }
 
@@ -248,7 +254,7 @@ mark {
 .content-extension {
     gap: 2rem;
     padding: 0rem 0rem 0rem 1.5rem;
-    border-left: var(--line);
+    border-left: var(--base-line);
 }
 
 .content-extension p {
