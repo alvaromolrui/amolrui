@@ -114,10 +114,12 @@ p {
 }
 
 i {
+    color: inherit;
     font-size: inherit;
 }
 
 b {
+    color: inherit;
     font-size: inherit;
 }
 
@@ -301,6 +303,10 @@ mark {
 
 .emojis {
     font-size: inherit;
+}
+
+.right {
+    align-items: flex-end;
 }
 
 @media (max-width: 800px) {
