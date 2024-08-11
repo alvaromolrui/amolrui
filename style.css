@@ -135,9 +135,11 @@ a:hover {
     color: var(--content-link-hover);
 }
 
+/*
 a:visited {
     color: var(--content-link-visited);
 }
+*/
 
 a:focus {
     outline: var(--line);
