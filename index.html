@@ -1,297 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Álvaro Molina - Diseñador de producto</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        
-        :root {
-        /*content*/
-        --content-primary-default: #100F0F;
-        --content-secondary-default: #6F6E69;
-        --content-tertiary-default: #FFFCF0;
-        --content-accent-default: #DA702C;
-
-        /*link*/
-        --content-link-default: #4385BE;
-        --content-link-hover: #205EA6;
-
-        /*background*/
-        --background-primary-default: #FFFCF0;
-        --background-secondary-default: #100F0F;
-        --background-accent-default: #DA702C;
-
-        /*border*/
-        --border-primary-default: #E6E4D9;
-        }
-
-        * {
-            margin-block-start: 0px;
-            margin-block-end: 0px;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 40px 0px 0px 0px;
-            box-sizing: border-box;
-            margin: 0 auto;
-            background: var(--background-primary-default);
-        }
-
-        .container {
-            font-family: "Space Mono", monospace;
-            font-weight: 400;
-            font-style: normal;
-            width: 100%;
-            max-width: 800px;
-            color: var(--content-primary-default);
-        }
-
-        code {
-            padding: 4px 8px; 
-            background: var(--background-accent-default);
-            color: var(--content-tertiary-default);
-            border-radius: 100px;
-            line-height: 200%;
-            white-space: nowrap;
-        }
-
-        a {
-            color: var(--content-link-default);
-            transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
-            text-decoration: none;
-        }
-
-        a:hover{
-            color: var(--content-link-hover);
-            text-decoration: none;
-        }
-
-        blockquote {
-            margin: 8px 0px 8px 0px;
-            border-left: solid 2px var(--border-primary-default);
-            color: var(--content-secondary-default);
-        }
-
-        hr {
-            border-width: 2px 0px 0px 0px;
-            border-style: solid;
-            border-color: var(--border-primary-default)
-        }
-
-        p {
-            margin: 8px 0px 16px 0px;
-        }
-
-        h1 {
-            margin: 40px 0px 16px 0px;
-        }
-
-        h2 {
-            margin: 32px 0px 24px 0px;
-        }
-
-        h3 {
-            margin: 40px 0px 4px 0px;
-        }
-
-        h4 {
-            margin: 16px 0px 8px 0px;
-        }
-
-        h5 {
-            color: var(--content-secondary-default);
-            margin: 24px 0px 4px 0px;
-        }
-
-        ul {
-            margin: 8px 0px 16px -8px;
-        }
-        
-        li {
-            margin: 8px 0px 8px 0px;
-        }
-
-        li::marker {
-            color: var(--content-primary-default);
-        }
-
-        @media (max-width: 800px) {
-            body {
-                padding: 16px 24px 0px 24px;
-            }
-            h1 {
-                font-size: 1.75em
-            }
-            h2 {
-                font-size: 1.25em
-            }
-        }
-    </style>
-    <script src="https://rawcdn.githack.com/oscarmorrison/md-page/232e97938de9f4d79f4110f6cfd637e186b63317/md-page.js"></script><noscript>
+    <meta name="description" content="Este es el curriculum vitae de Álvaro Molina, Diseñador de producto. En esta página web podrás encontrar información como mi experiencia, mi formación, las acciones de voluntariado en las que he colaborado o los reconocimientos que he obtenido."/>
+    <meta name="keywords" content="curriculum, vitae, diseño, producto, genially, álvaro, molina" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" alt="Icono que representa a una persona de busto">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="home" class="container">
-## <span style="color:var(--content-secondary-default);font-weight:400;">Curriculum vitae</span>
 
----
+<body id="home">
 
-# Álvaro Molina · <span style="color:var(--content-accent-default);font-weight:400;">*Diseñador de producto*</span>
-👤 **Linkedin**: [@alvaromolinaruiz](https://linkedin.com/in/alvaromolinaruiz/)
-✉️ **Correo**: [alvaromolrui@gmail.com](mailto:alvaromolrui@gmail.com)
-📱 **Teléfono**: [(+34) 653 26 58 84](tel:+34653265884)
+<!--Header-->
+<header>
+    <h2 class="regular secondary">Curriculum vitae</h2>
+</header>
 
-##### Sobre mi
-Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.
+<!--Content-->
+<main>
 
-Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, Design system, Motion design, Web design y Graphic design. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara.
-##### Competencias básicas
-`#Experiencia de usuario` `#Interfaz de usuario` `#Animación` `#Diseño de interacción` `#Arquitectura de la información` `#Investigación de usuarios`
+    <!--About me-->
+    <article>
+        <section>
+            <div class="content-block">
+                <h1>Álvaro Molina · <i class="accent regular">Diseñador de producto</i></h1>
+                <p><span class="emojis" aria-hidden="true">👤 </span><b>Linkedin</b>: <a href="https://linkedin.com/in/alvaromolinaruiz/" target="_blank" rel="noopener noreferrer" aria-label="Enlace al perfil de Linkedin" title="Enlace al perfil de Linkedin">@alvaromolinaruiz</a>
+                <br>
+                <span class="emojis" aria-hidden="true">✉️ </span><b>Correo</b>: <a href="mailto:alvaromolrui@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enlace para enviar un correo electrónico" title="Enlace para enviar un correo electrónico">alvaromolrui@gmail.com</a>
+                <br>
+                <span class="emojis" aria-hidden="true">📱 </span><b>Teléfono</b>: <a href="tel:+34653265884" target="_blank" rel="noopener noreferrer" aria-label="Enlace para llamar por teléfono" title="Enlace para llamar por teléfono">(+34) 653 26 58 84</a></p>
+            </div>   
+            
+            <div class="content-block">
+                <h5 class="secondary">Sobre mi</h5>
+                <p>Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.
+                <br><br>
+                Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, Design system, Motion design, Web design y Graphic design. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara.</p>
+            </div>
+            
+            <div class="content-block">
+                <h5 class="secondary">Competencias básicas</h5>
+                <div class="tag-group">
+                    <mark>#Experiencia de usuario</mark>
+                    <mark>#Interfaz de usuario</mark>
+                    <mark>#Animación</mark>
+                    <mark>#Diseño de interacción</mark>
+                    <mark>#Arquitectura de la información</mark>
+                    <mark>#Investigación de usuarios</mark>
+                </div>
+            </div>
+        </section>
+    </article>
 
-<br>
+    <!--Experience-->
+    <article>
+        <h1><span class="emojis" aria-hidden="true">💼 </span>Experiencia</h1>
+        <section class="content-highlighted">
+            <h5 class="secondary">Puesto actual</h5>
+            <div class="content-block">
+                <h3>Diseñador de producto en <a href="https://genially.com/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la empresa" title="Enlace a la página web de la empresa">Genially</a></h3>
+                <p><i>Enero 2022 - <b class="accent">Actualidad </b>(Remoto)</i></p>
+            </div>
 
----
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Enfocado en facilitar la creación de experiencias comunicativas diferenciadoras en el ámbito formativo, académico y profesional, a través del uso de efectos, interactividad y animación, planteando soluciones para la experiencia e interfaz de usuario llevando a cabo un proceso de diseño completo, involucrándome desde la detección de oportunidades hasta la evaluación de las soluciones tras la implementación.</p>
+                </div>
 
-# 💼 Experiencia
-### Diseñador de producto en [Genially](https://genially.com/)
-*Enero 2022 - <span style="color:var(--content-accent-default)">**Actualidad**</span> (Remoto)*
->##### Descripción
->Enfocado en facilitar la creación de experiencias comunicativas diferenciadoras en el ámbito formativo, académico y profesional, a través del uso de efectos, interactividad y animación, planteando soluciones para la experiencia e interfaz de usuario llevando a cabo un proceso de diseño completo, involucrándome desde la detección de oportunidades hasta la evaluación de las soluciones tras la implementación.
->
->##### Competencias básicas
->`#Experiencia de usuario` `#Interfaz de usuario` `#Diseño de interacción` `#Flujos de usuario` `#Esquematización de ideas` `#Arquitectura de la información` `#Investigación de usuarios`
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Experiencia de usuario</mark>
+                        <mark>#Interfaz de usuario</mark>
+                        <mark>#Diseño de interacción</mark>
+                        <mark>#Flujos de usuario</mark>
+                        <mark>#Esquematización de ideas</mark>
+                        <mark>#Arquitectura de la información</mark>
+                        <mark>#Investigación de usuarios</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<br>
+        <section>
+            <div class="content-block">
+                <h3>Diseñador de IU & Sistema de diseño en <a href="https://genially.com/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la empresa" title="Enlace a la página web de la empresa">Genially</a></h3>
+                <p><i>Julio 2020 - Enero 2022 (Remoto)</i></p>
+            </div>
 
-### Diseñador de IU & Sistema de diseño en [Genially](https://genially.com/)
-*Julio 2020 - Enero 2022 (Remoto)*
->##### Descripción
->Creando las bases del sistema de diseño, documentando, diseñando los componentes fundamentales y definiendo patrones básicos de diseño, buscando la máxima escalabilidad y con gran atención a la viabilidad de implementación dado que hasta el momento no existía sistema de diseño. Además durante esta etapa estuve participando en el diseño de la página web construyendo un sistema modular que permitiera al equipo de contenidos crear páginas a través de un content manager personalizado. También participé rediseñando diferentes partes de la IU de la aplicación.
->
->##### Competencias básicas
->`#Diseño de interacción` `#Interfaz de usuario` `#Sistema de diseño` `#Animación`
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Creando las bases del sistema de diseño, documentando, diseñando los componentes fundamentales y definiendo patrones básicos de diseño, buscando la máxima escalabilidad y con gran atención a la viabilidad de implementación dado que hasta el momento no existía sistema de diseño. Además durante esta etapa estuve participando en el diseño de la página web construyendo un sistema modular que permitiera al equipo de contenidos crear páginas a través de un content manager personalizado. También participé rediseñando diferentes partes de la IU de la aplicación.</p>
+                </div>
 
-<br>
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Diseño de interacción</mark>
+                        <mark>#Interfaz de usuario</mark>
+                        <mark>#Sistema de diseño</mark>
+                        <mark>#Animación</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-### Diseñador gráfico en [Genially](https://genially.com/)
-*Junio 2019 - Julio 2020 (Córdoba)*
->##### Descripción
->Creando diseños para plantillas de creaciones de diferentes temáticas, estéticas y de contenidos, ofrecidas a través del catálogo de plantillas. También trabajé creando colecciones de recursos gráficos ofrecidos en los catálogos de recursos de la aplicación y proponiendo mejoras en la categorización, organización y gestionando todo lo relacionado con la creación y publicación de estos. Además también colaboré con el equipo de marketing en la creación de contenidos visuales para campañas comunicación.
->
->##### Competencias básicas
->`#Diseño de interacción` `#Diseño gráfico` `#Animación` `#Gestión de contenidos`
+        <section>
+            <div class="content-block">
+                <h3>Diseñador gráfico en <a href="https://genially.com/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la empresa" title="Enlace a la página web de la empresa">Genially</a></h3>
+                <p><i>Junio 2019 - Julio 2020 (Córdoba)</i></p>
+            </div>
 
-<br>
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Creando diseños para plantillas de creaciones de diferentes temáticas, estéticas y de contenidos, ofrecidas a través del catálogo de plantillas. También trabajé creando colecciones de recursos gráficos ofrecidos en los catálogos de recursos de la aplicación y proponiendo mejoras en la categorización, organización y gestionando todo lo relacionado con la creación y publicación de estos. Además también colaboré con el equipo de marketing en la creación de contenidos visuales para campañas comunicación.</p>
+                </div>
 
-### Diseñador gráfico independiente 
-*Enero 2018 - Noviembre 2021*
->##### Descripción
->Creando marcas e identidades visuales corporativas, haciendo diseño editorial y haciendo motion graphics. Además también he ilustrado (algo) y he colaborado en algunos proyectos en la parte de diseño y maquetación web.
->
->##### Competencias básicas
->`#Diseño gráfico` `#Animación` `#Identidad visual` `#Diseño web` `#Maquetación web` `#Cartelería`
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Diseño de interacción</mark>
+                        <mark>#Diseño gráfico</mark>
+                        <mark>#Animación</mark>
+                        <mark>#Gestión de contenidos</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<br>
+        <section>
+            <div class="content-block">
+                <h3>Diseñador gráfico independiente</h3>
+                <p><i>Enero 2018 - Noviembre 2021</i></p>
+            </div>
 
-### Profesional Audiovisual independiente
-*Febrero 2014 - Junio 2019*
->##### Descripción
->Trabajando como director de fotografía y operador de cámara en proyectos de cine, publicidad, videoclips, vídeos corporativos, conciertos, eventos en directo, etc. También realizando tareas como Editor y Postproductor de vídeo. Y algunos trabajos de fotografía y vídeos en bodas, bautizos y comuniones además de fotografía en eventos.
->
->##### Competencias básicas
->`#Operación de cámara` `#Dirección de fotografía` `#Etalonaje` `#Animación` `#Montaje de vídeo` `#Guión gráfico` `#Esquemas de iluminación` `#Posproducción`
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Creando marcas e identidades visuales corporativas, haciendo diseño editorial y haciendo motion graphics. Además también he ilustrado (algo) y he colaborado en algunos proyectos en la parte de diseño y maquetación web.</p>
+                </div>
 
-<br>
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Diseño gráfico</mark>
+                        <mark>#Animación</mark>
+                        <mark>#Identidad visual</mark>
+                        <mark>#Diseño web</mark>
+                        <mark>#Maquetación web</mark>
+                        <mark>#Cartelería</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
 
----
+        <section>
+            <div class="content-block">
+                <h3>Profesional Audiovisual independiente</h3>
+                <p><i>Febrero 2014 - Junio 2019</i></p>
+            </div>
 
-# 🛟 Voluntariado
-### Colaborador en [CiC-Batá](https://www.cicbata.org/)
-*Junio 2023 - <span style="color:var(--content-accent-default)">**Actualidad**</span> (Córdoba)*
->##### Descripción
->Llevando a cabo un proyecto de investigación para encontrar soluciones que faciliten el acceso a la tecnología y la reducción de la brecha digital en personas mayores. [Ver conclusiones](https://view.genially.com/65d763a85b5dfb0014dd1b29)
->##### Competencias básicas
->`#Investigación documental` `#Ideación de productos` `#Entrevistas`
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Trabajando como director de fotografía y operador de cámara en proyectos de cine, publicidad, videoclips, vídeos corporativos, conciertos, eventos en directo, etc. También realizando tareas como Editor y Postproductor de vídeo. Y algunos trabajos de fotografía y vídeos en bodas, bautizos y comuniones además de fotografía en eventos.</p>
+                </div>
 
-<br>
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Operación de cámara</mark>
+                        <mark>#Dirección de fotografía</mark>
+                        <mark>#Etalonaje</mark>
+                        <mark>#Animación</mark>
+                        <mark>#Montaje de vídeo</mark>
+                        <mark>#Guión gráfico</mark>
+                        <mark>#Esquemas de iluminación</mark>
+                        <mark>#Posproducción</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 
-### Colaboración con [AJDEM](https://www.ajdem.org/)
-*Noviembre 2013 (Jaén)*
->##### Descripción
->Creando el cartel para el Día Nacional de la Esclerosis Múltiple donde pude desarrollar la idea, realizar la sesión fotográfica y componer el cartel
->##### Competencias básicas
->`#Fotografía` `#Diseño gráfico` `#Sesión de fotos`
+    <!--Volunteer-->
+    <article>
+        <h1><span class="emojis" aria-hidden="true">🛟 </span>Voluntariado</h1>
+        <section class="content-highlighted">
+            <h5 class="secondary">Colaboración en curso</h5>
+            <div class="content-block">
+                <h3>Colaborador en <a href="https://www.cicbata.org/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la asociación" title="Enlace a la página web de la asociación">CiC-Batá</a></h3>
+                <p><i>Junio 2023 - <b class="accent">Actualidad </b>(Córdoba)</i></p>
+            </div>
 
-<br>
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Llevando a cabo un proyecto de investigación para encontrar soluciones que faciliten el acceso a la tecnología y la reducción de la brecha digital en personas mayores. <a href="https://view.genially.com/65d763a85b5dfb0014dd1b29" target="_blank" rel="noopener noreferrer" aria-label="Enlace a otra página web para ver documento con las conclusiones de la investigación" title="Enlace a otra página web para ver documento con las conclusiones de la investigación">Ver conclusiones</a></p>
+                </div>
 
----
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Investigación documental</mark>
+                        <mark>#Ideación de productos</mark>
+                        <mark>#Entrevistas</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-# 📕 Educación y Cursos formativos
+        <section>
+            <div class="content-block">
+                <h3>Colaboración con <a href="https://www.ajdem.org/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la asociación" title="Enlace a la página web de la asociación">AJDEM</a></h3>
+                <p><i>Noviembre 2013 (Jaén)</i></p>
+            </div>
 
-### <span style="font-weight: 400;">Design Graduate</span>
-Instituto Tramontana, *2023 - <span style="color:var(--content-accent-default)">**Actualidad**</span> (Remoto)*
-### EEAASS de Diseño Gráfico
-EASD Mateo Inurria, *2015 - 2020 (Córdoba)*
-### <span style="font-weight: 400;">Técnico Profesional en Diseño Web Avanzado con CSS3</span>
-INSEM, *2019 (Online)*
-### CFGS Iluminación, Captación y Tratamiento de imagen
-IES Auringis, *2013 - 2015 (Jaén)*
-### Bachillerato en Artes plásticas, Diseño e Imagen
-IES Huarte de San Juan, *2010 - 2013 (Linares)*
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Creando el cartel para el Día Nacional de la Esclerosis Múltiple donde pude desarrollar la idea, realizar la sesión fotográfica y componer el cartel.</p>
+                </div>
 
-<br>
+                <div class="content-block">
+                    <h5 class="secondary">Competencias básicas</h5>
+                    <div class="tag-group">
+                        <mark>#Fotografía</mark>
+                        <mark>#Diseño gráfico</mark>
+                        <mark>#Sesión de fotos</mark>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 
-## Otros cursos
-##### Microcursos
-- **Investigación ágil para producto digital**, Instituto Tramontana, *2023 (Madrid)*
-- Introducción a la programación en JavaScript, Domestika, *2020 (Online)*
-- Introducción al UX Writing, Domestika, *2020 (Online)*
-- Introducción al diseño UX, Domestika, *2020 (Online)*
-- Layout web con CSS Grid, Flexbox y otras técnicas modernas, Domestika, *2020 (Online)*
-- After Effects, expresiones para motion graphics, Domestika, *2019 (Online)*
-- **Gráficos vectoriales SVG**: ilustrar y animar con código, Domestika, *2019 (Online)*
-- Curso online de Trucos de Iluminación y Producción para Fotógrafos, *2014 (Online)*
-- Curso presencial de montaje y postproducción de video, UPMJ, *2014 (Jaén)*
-##### Workshops
-- **Data Driven Design** con Alfonso Romay, Torresburriel Estudio, *2021 (Online)*
-- **UX Writing** con Mario Ferrer, *2020 (Online)*
-- Comunicación visual y Visual Thinking: Piensa mejor y comunica más rápido, Sara Martínez - 5 Palabras, *2020 (Online)*
-##### Idiomas
-- **Clases de conversación en Inglés**, Twenix, *Abril 2021 - **Actualidad** (Online)*
-- Curso de ingles nivel Upper intermediate (B2), Arena School of English, *2013 (Dublín)*
-##### Cursos
-- Adobe Photoshop: "Maestro en 50h" + "Pro en 35h" + "Maestría en dibujo digital", Megacursos.com, *2016 (Online)*
-- Adobe Illustrator: "Maestro en 70h" + "Pro en 35h" + "Maestría en ilustración vectorial" + "Maestría en tipografía ilustrada", Megacursos.com, *2016 (Online)*
+    <!--Education-->
+    <article>
+        <h1><span class="emojis" aria-hidden="true">📕 </span>Educación y Cursos formativos</h1>
+        <section class="content-highlighted">
+            <h5 class="secondary">Formación en progreso</h5>
+            <div class="content-block">
+                <h3 class="regular"><a href="https://www.designgraduate.com/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a la página web de la escuela" title="Enlace a la página web de la escuela">Design Graduate</a></h3>
+                <p><i>Instituto Tramontana, 2023 - <b class="accent">Actualidad </b>(Remoto)</i></p>
+            </div>
+        </section>
 
-<br>
+        <section>
+            <div class="content-block">
+                <h3>EEAASS de Diseño Gráfico</h3>
+                <p><i>EASD Mateo Inurria, 2015 - 2020 (Córdoba)</i></p>
+            </div>
+        </section>
 
----
+        <section>
+            <div class="content-block">
+                <h3 class="regular">Técnico Profesional en Diseño Web Avanzado con CSS3</h3>
+                <p><i>INESEM, 2019 (Online)</i></p>
+            </div>
+        </section>
 
-# 🏅 Reconocimientos
-### Premio a la Mejor Dirección de Fotografía en VI Rodando por Jaén
-*Septiembre 2018*
->##### Descripción
->Premio expedido por la Diputación de Jaén por el Cortometraje Habitación 205. [Ver nota de prensa](https://jaenaudiovisual.es/palmares-del-vi-rodando-por-jaen/)
+        <section>
+            <div class="content-block">
+                <h3>CFGS Iluminación, Captación y Tratamiento de imagen</h3>
+                <p><i>IES Auringis, 2013 - 2015 (Jaén)</i></p>
+            </div>
+        </section>
 
-<br>
+        <section>
+            <div class="content-block">
+                <h3>Bachillerato en Artes plásticas, Diseño e Imagen</h3>
+                <p><i>IES Huarte de San Juan, 2010 - 2013 (Linares)</i></p>
+            </div>
+        </section>
 
----
+        <h2>Otros cursos</h2>
+        <section>
+            <div class="content-block">
+                <h5 class="secondary">Microcursos</h5>
+                <ul>
+                    <li><b>Investigación ágil para producto digital</b>, Instituto Tramontana, <i>2023 (Madrid)</i></li>
+                    <li>Introducción a la programación en JavaScript, Domestika, <i>2020 (Online)</i></li>
+                    <li>Introducción al UX Writing, Domestika, <i>2020 (Online)</i></li>
+                    <li>Introducción al diseño UX, Domestika, <i>2020 (Online)</i></li>
+                    <li>Layout web con CSS Grid, Flexbox y otras técnicas modernas, Domestika, <i>2020 (Online)</i></li>
+                    <li>After Effects, expresiones para motion graphics, Domestika, <i>2019 (Online)</i></li>
+                    <li><b>Gráficos vectoriales SVG: ilustrar y animar con código</b>, Domestika, <i>2019 (Online)</i></li>
+                    <li>Curso online de Trucos de Iluminación y Producción para Fotógrafos, <i>2014 (Online)</i></li>
+                    <li>Curso presencial de montaje y postproducción de video, UPMJ, <i>2014 (Jaén)</i></li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h5 class="secondary">Workshops</h5>
+                <ul>
+                    <li><b>Data Driven Design</b> con Alfonso Romay, Torresburriel Estudio, <i>2021 (Online)</i></li>
+                    <li><b>UX Writing</b> con Mario Ferrer, <i>2020 (Online)</i></li>
+                    <li>Comunicación visual y Visual Thinking: Piensa mejor y comunica más rápido, Sara Martínez - 5 Palabras, <i>2020 (Online)</i></li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h5 class="secondary">Idiomas</h5>
+                <ul>
+                    <li><b>Clases de conversación en Inglés</b>, Twenix, <i>Abril 2021 - <b class="accent">Actualidad</b> (Online)</i></li>
+                    <li>Curso de ingles nivel Upper intermediate (B2), Arena School of English, <i>2013 (Dublín)</i></li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h5 class="secondary">Cursos</h5>
+                <ul>
+                    <li>Adobe Photoshop: "Maestro en 50h" + "Pro en 35h" + "Maestría en dibujo digital", Megacursos.com, <i>2016 (Online)</i></li>
+                    <li>Adobe Illustrator: "Maestro en 70h" + "Pro en 35h" + "Maestría en ilustración vectorial" + "Maestría en tipografía ilustrada", Megacursos.com, <i>2016 (Online)</i></li>
+                </ul>
+            </div>
+        </section>
+    </article>
 
-[Volver arriba](#home) | <a href="assets/Álvaro Molina - Diseñador de producto.pdf" download>Descargar en PDF</a>
-<br>
-<span style="font-size:12px;color:var(--content-secondary-default);">Página creada utilizando el script [md-page de Oscar Morrison](https://github.com/oscarmorrison/md-page) y la paleta de colores [Flexoki](https://stephango.com/flexoki)</span>
-    </div>
+    <!--Acknowledgements-->
+    <article>
+        <h1><span class="emojis" aria-hidden="true">🏅 </span>Reconocimientos</h1>
+        <section>
+            <div class="content-block">
+                <h3>Premio a la Mejor Dirección de Fotografía en VI Rodando por Jaén</h3>
+                <p><i>Septiembre 2018 (Jaén)</i></p>
+            </div>
+
+            <div class="content-extension">
+                <div class="content-block">
+                    <h5 class="secondary">Descripción</h5>
+                    <p>Premio expedido por la Diputación de Jaén por el Cortometraje Habitación 205. <a href="https://jaenaudiovisual.es/palmares-del-vi-rodando-por-jaen/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a otra página web para ver la nota de prensa" title="Enlace a otra página web para ver la nota de prensa">Ver nota de prensa</a></p>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <p><a href="#home" rel="noopener noreferrer" aria-label="Enlace para volver al principio de la página" title="Enlace para volver al principio de la página">Volver arriba</a> | <a href="assets/Álvaro Molina - Diseñador de producto.pdf" download aria-label="Enlace para descargar la versión PDF del curriculum vitae" title="Enlace para descargar la versión PDF del curriculum vitae">Descargar en PDF</a></p>
+
+<!--Footer-->
+<footer>
+    <p class="small">Página web creada siguiendo las <a href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener noreferrer" aria-label="Enlace para ir a la página de la w3 donde se recogen las guías de accesibilidad" title="Enlace para ir a la página de la w3 donde se recogen las guías de accesibilidad">WCAG 2</a>, tratando de garantizar el nivel AAA.</p>
+</footer>
+
 </body>
+
 </html>

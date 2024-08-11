@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
+:root {
+    /*base*/
+    --white01: hsl(343, 100%, 99%);
+    --white02: hsl(343, 28%, 93%);
+    --white03: hsl(343, 12%, 80%);
+    --white04: hsl(343, 18%, 85%);
+    --black01: hsl(0, 3%, 6%);
+    --black02: hsl(0, 3%, 26%);
+    --black03: hsl(0, 3%, 34%);
+    --accent: hsl(346, 80%, 33%);
+    --blue-light: hsl(208, 49%, 50%);
+    --blue-dark: hsl(212, 60%, 32%);
+    --purple: hsl(269, 60%, 32%);
+
+    /*content*/
+    --content-primary-default: var(--black01);
+    --content-secondary-default: var(--black03);
+    --content-tertiary-default: var(--white01);
+    --content-quaternary-default: var(--black02);
+    --content-accent-default: var(--accent);
+
+    /*link*/
+    --content-link-default: var(--blue-dark);
+    --content-link-hover: var(--blue-light);
+    --content-link-visited: var(--black03);
+
+    /*background*/
+    --background-primary-default: var(--white01);
+    --background-secondary-default: var(--black01);
+    --background-tertiary-default: var(--white02);
+    --background-accent-default: var(--accent);
+
+    /*border*/
+    --border-primary-default: var(--white04);
+    --border-secondary-default: var(--white03);
+    --border-accent-default: var(--accent);
+
+    /*weight*/
+    --regular: 400;
+    --bold: 700;
+
+    /*size*/
+    --bigger: 2rem;
+    --big: 1.5rem;
+    --medium: 1.125rem;
+    --basic: 1rem;
+    --small: 0.875rem;
+
+    /*line*/
+    --line: 0.125rem solid var(--border-primary-default);
+}
+
+* {
+    /*margin-reset*/
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+
+    /*font*/
+    font-size: 18px;
+    font-family: "Space Mono", monospace;
+    color: var(--content-primary-default);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2.5rem 5rem 0rem 5rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: var(--background-primary-default);
+}
+
+h1, h2, h3, h4, h4, h5 {
+    font-weight: var(--bold);
+    font-style: normal;
+}
+
+h1 {
+    font-size: var(--bigger);
+}
+
+h2 {
+    font-size: var(--big);
+}
+
+h3 {
+    font-size: var(--medium);
+}
+
+h4 {
+    font-size: var(--basic);
+}
+
+h5 {
+    font-size: var(--small);
+}
+
+p {
+    font-size: var(--basic);
+    font-weight: var(--regular);
+    font-style: normal;
+}
+
+i {
+    font-size: inherit;
+}
+
+b {
+    font-size: inherit;
+}
+
+a {
+    font-size: inherit;
+    color: var(--content-link-default);
+    outline: var(--line);
+    outline-color: transparent;
+    border-radius: 0.25rem;
+    padding: 0rem 0.25rem;
+    white-space: nowrap;
+    transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
+}
+
+a:hover {
+    color: var(--content-link-hover);
+}
+
+a:visited {
+    color: var(--content-link-visited);
+}
+
+a:focus {
+    outline: var(--line);
+    outline-color: var(--content-link-default);
+    border-radius: 0.25rem;
+    padding: 0rem 0.25rem;
+}
+
+a:focus-visible {
+    outline: var(--line);
+    outline-color: var(--content-link-default);
+    border-radius: 0.25rem;
+    padding: 0rem 0.25rem;
+}
+
+li {
+    font-size: var(--basic);
+    line-height: 200%;
+}
+
+li::marker {
+    color: var(--content-primary-default);
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    padding: 2rem 0rem 2.5rem 0rem;
+    border-bottom: var(--line);
+}
+
+main {
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+footer {
+    padding: 2rem 0rem 2.5rem 0rem;
+}
+
+article, section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+article {
+    padding: 2rem 0rem 2.5rem 0rem;
+    border-bottom: var(--line);
+}
+
+section {
+    margin-bottom: 2.5rem;
+    
+    /*animation*/
+    animation-name: scroll;
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-range-end: cover 25%;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+}
+
+@keyframes scroll {
+    0% {transform: translateY(8rem);}
+    100% {transform: translateY(0rem);}
+}
+
+mark {
+    padding: 0.125rem 0.5rem; 
+    background: var(--background-accent-default);
+    border-radius: 2rem;
+    font-size: var(--small);
+    color: var(--content-tertiary-default);
+    white-space: nowrap;
+}
+
+.content-block, .content-extension {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.content-block {
+    gap: 0.5rem;
+}
+
+.content-extension {
+    gap: 2rem;
+    padding: 0rem 0rem 0rem 1.5rem;
+    border-left: var(--line);
+}
+
+.content-extension p {
+    color: var(--content-secondary-default);
+}
+
+.content-highlighted {
+    background: var(--background-tertiary-default);
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    box-sizing: content-box;
+    margin-left: -2.5rem;
+}
+
+.content-highlighted .content-extension {
+    border-color: var(--border-secondary-default);
+}
+
+.content-highlighted .content-extension p, .content-highlighted .secondary {
+    color: var(--content-quaternary-default);
+}
+
+.tag-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.accent {
+    color: var(--content-accent-default);
+}
+
+.accent-dark {
+    color: var(--content-accent-dark);
+}
+
+.secondary {
+    color: var(--content-secondary-default);
+}
+
+.regular {
+    font-weight: var(--regular);
+}
+
+.small {
+    font-size: var(--small);
+}
+
+.emojis {
+    font-size: inherit;
+}
+
+@media (max-width: 800px) {
+    * {
+        font-size: 16px;
+    }
+
+    body {
+        padding: 1.5rem 2rem 0rem 2rem;
+    }
+
+    article {
+        padding: 1.5rem 0rem 2rem 0rem;
+    }
+
+    .content-highlighted {
+        padding: 2.5rem 1.5rem;
+        margin-left: -1.5rem;
+    }
+}
