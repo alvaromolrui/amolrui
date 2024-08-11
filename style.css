@@ -26,7 +26,6 @@
     /*link*/
     --content-link-default: var(--blue-dark);
     --content-link-hover: var(--blue-light);
-    --content-link-visited: var(--black03);
 
     /*background*/
     --background-primary-default: var(--white01);
@@ -39,6 +38,7 @@
     --border-primary-default: var(--white04);
     --border-secondary-default: var(--white03);
     --border-accent-default: var(--accent01);
+    --border-link-default: var(--blue-dark);
 
     /*weight*/
     --regular: 400;
@@ -148,13 +148,13 @@ a {
 
 a:focus {
     outline: var(--base-line);
-    outline-color: var(--content-link-default);
+    outline-color: var(--border-link-default);
 
 }
 
 a:focus-visible {
     outline: var(--base-line);
-    outline-color: var(--content-link-default);
+    outline-color: var(--border-link-default);
 }
 
 ul {
@@ -298,6 +298,17 @@ mark {
     transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
 }
 
+.action:focus {
+    outline: var(--base-line);
+    outline-color: var(--border-accent-default);
+
+}
+
+.action:focus-visible {
+    outline: var(--base-line);
+    outline-color: var(--border-accent-default);
+}
+
 .secondary {
     color: var(--content-secondary-default);
 }
@@ -336,4 +347,5 @@ mark {
         padding: 2.5rem 1.5rem;
         margin-left: -1.5rem;
     }
+
 }
