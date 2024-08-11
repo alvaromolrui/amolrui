@@ -125,9 +125,8 @@ a {
     color: var(--content-link-default);
     outline: var(--line);
     outline-color: transparent;
-    border-radius: 0.25rem;
-    padding: 0rem 0.25rem;
     white-space: nowrap;
+    border-radius: 0.25rem;
     transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
 }
 
@@ -184,7 +183,7 @@ main {
 }
 
 footer {
-    padding: 2rem 0rem 2.5rem 0rem;
+    padding: 0rem 0rem 2.5rem 0rem;
 }
 
 article, section {
