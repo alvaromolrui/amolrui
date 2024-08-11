@@ -19,6 +19,8 @@
     --content-tertiary-default: var(--white01);
     --content-quaternary-default: var(--black02);
     --content-accent-default: var(--accent);
+    --content-action-default: var(--black01);
+    --content-action-hover: var(--black01);
 
     /*link*/
     --content-link-default: var(--blue-dark);
@@ -28,7 +30,7 @@
     /*background*/
     --background-primary-default: var(--white01);
     --background-secondary-default: var(--white02);
-    --background-quaternary-default: var(--white02);
+    --background-secondary-hover: var(--white03);
     --background-accent-default: var(--accent);
 
     /*border*/
@@ -134,20 +136,21 @@ a {
     a:hover {
         color: var(--content-link-hover);
     }
+    .action:hover {
+        background: var(--background-secondary-hover);
+        color: var(--content-action-hover);
+    }
   }
 
 a:focus {
     outline: var(--line);
     outline-color: var(--content-link-default);
-    border-radius: 0.25rem;
-    padding: 0rem 0.25rem;
+
 }
 
 a:focus-visible {
     outline: var(--line);
     outline-color: var(--content-link-default);
-    border-radius: 0.25rem;
-    padding: 0rem 0.25rem;
 }
 
 ul {
@@ -225,7 +228,7 @@ section {
 mark {
     padding: 0.125rem 0.5rem; 
     background: var(--background-accent-default);
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     font-size: var(--small);
     color: var(--content-tertiary-default);
     white-space: nowrap;
@@ -280,6 +283,15 @@ mark {
     color: var(--content-accent-default);
 }
 
+.action {
+    background: var(--background-secondary-default);
+    text-decoration: none;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    color: var(--content-action-default);
+    transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
+}
+
 .secondary {
     color: var(--content-secondary-default);
 }
@@ -295,6 +307,10 @@ mark {
 .emojis {
     color: inherit;
     font-size: inherit;
+}
+
+.right {
+    align-self: flex-end;
 }
 
 @media (max-width: 800px) {
