@@ -12,7 +12,6 @@
     --accent: hsl(346, 80%, 33%);
     --blue-light: hsl(208, 49%, 50%);
     --blue-dark: hsl(212, 60%, 32%);
-    --purple: hsl(269, 60%, 32%);
 
     /*content*/
     --content-primary-default: var(--black01);
@@ -28,15 +27,13 @@
 
     /*background*/
     --background-primary-default: var(--white01);
-    --background-secondary-default: var(--black01);
-    --background-tertiary-default: var(--white02);
+    --background-secondary-default: var(--white02);
     --background-quaternary-default: var(--white02);
     --background-accent-default: var(--accent);
 
     /*border*/
     --border-primary-default: var(--white04);
     --border-secondary-default: var(--white03);
-    --border-accent-default: var(--accent);
 
     /*weight*/
     --regular: 400;
@@ -252,7 +249,7 @@ mark {
 }
 
 .content-highlighted {
-    background: var(--background-tertiary-default);
+    background: var(--background-secondary-default);
     padding: 3rem 2.5rem;
     border-radius: 1.5rem;
     box-sizing: content-box;
