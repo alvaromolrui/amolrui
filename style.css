@@ -30,6 +30,7 @@
     --background-primary-default: var(--white01);
     --background-secondary-default: var(--black01);
     --background-tertiary-default: var(--white02);
+    --background-quaternary-default: var(--white02);
     --background-accent-default: var(--accent);
 
     /*border*/
@@ -156,6 +157,10 @@ a:focus-visible {
     padding: 0rem 0.25rem;
 }
 
+ul {
+    margin-left: -0.5rem;
+}
+
 li {
     font-size: var(--basic);
     line-height: 200%;
@@ -209,14 +214,14 @@ section {
     animation-name: scroll;
     view-timeline: --subjectReveal block;
     animation-timeline: --subjectReveal;
-    animation-range-end: cover 25%;
+    animation-range-end: cover 50%;
     animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
     animation-fill-mode: both;
     animation-duration: 1ms;
 }
 
 @keyframes scroll {
-    0% {transform: translateY(8rem);}
+    0% {transform: translateY(4rem);}
     100% {transform: translateY(0rem);}
 }
 
