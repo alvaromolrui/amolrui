@@ -213,6 +213,10 @@ section {
     animation-duration: 1ms;
 }
 
+#contact section {
+    animation-range-end: cover 0%;
+}
+
 @keyframes scroll {
     0% {transform: translateY(4rem);}
     100% {transform: translateY(0rem);}
@@ -274,10 +278,6 @@ mark {
 
 .accent {
     color: var(--content-accent-default);
-}
-
-.accent-dark {
-    color: var(--content-accent-dark);
 }
 
 .secondary {
