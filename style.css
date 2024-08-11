@@ -135,8 +135,14 @@ a {
 }
 
 @media (hover: hover) {
+    a {
+        user-select: none;
+    }
     a:hover {
         color: var(--content-link-hover);
+    }
+    .action {
+        user-select: none;
     }
     .action:hover {
         background: var(--background-secondary-hover);
