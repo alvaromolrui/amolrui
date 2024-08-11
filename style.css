@@ -139,12 +139,6 @@ a {
     }
   }
 
-/*
-a:visited {
-    color: var(--content-link-visited);
-}
-*/
-
 a:focus {
     outline: var(--line);
     outline-color: var(--content-link-default);
