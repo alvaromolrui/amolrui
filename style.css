@@ -296,11 +296,8 @@ mark {
 }
 
 .emojis {
+    color: inherit;
     font-size: inherit;
-}
-
-.right {
-    align-items: flex-end;
 }
 
 @media (max-width: 800px) {
