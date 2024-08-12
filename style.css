@@ -18,6 +18,7 @@
     --content-secondary-default: var(--black03);
     --content-tertiary-default: var(--white01);
     --content-quaternary-default: var(--black02);
+
     --content-accent-default: var(--accent01);
     --content-action-default: var(--black01);
     --content-action-hover: var(--black01);
@@ -30,11 +31,13 @@
     --background-primary-default: var(--white01);
     --background-secondary-default: var(--white02);
     --background-secondary-hover: var(--white03);
+
     --background-accent-default: var(--accent01);
 
     /*border*/
     --border-primary-default: var(--white04);
     --border-secondary-default: var(--white03);
+    
     --border-accent-default: var(--accent01);
     --border-link-default: var(--blue-dark);
 
@@ -209,19 +212,18 @@ article {
 
 section {
     margin-bottom: 2.5rem;
-    
+
     /*animation*/
     animation-name: scroll;
-    view-timeline: --subjectReveal block;
-    animation-timeline: --subjectReveal;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
     animation-range-end: cover 50%;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
     animation-fill-mode: both;
     animation-duration: 1ms;
 }
 
 #contact section {
-    animation-range-end: cover 0%;
+    animation: none !important;
 }
 
 @keyframes scroll {
@@ -348,4 +350,11 @@ mark {
         margin-left: -1.5rem;
     }
 
+}
+
+@media (prefers-reduced-motion) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }
