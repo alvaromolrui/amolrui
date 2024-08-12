@@ -147,7 +147,7 @@ a {
         background: var(--background-secondary-hover);
         color: var(--content-action-hover);
     }
-  }
+}
 
 a:focus {
     outline: var(--base-line);
@@ -190,12 +190,8 @@ header {
     padding: 2rem 0rem 0rem 0rem;
 }
 
-main {
-    margin: 2rem 0rem 0rem 0rem;
-}
-
 footer {
-    padding: 0rem 0rem 2.5rem 0rem;
+    padding: 2rem 0rem 2.5rem 0rem;
 }
 
 article, section {
@@ -216,7 +212,7 @@ article {
     margin-bottom: 2.5rem;
 }
 
-main section article {
+main section:nth-child(n+2):not(:last-child) article {
     /*animation*/
     animation-name: scroll;
     animation-timeline: view();
@@ -341,7 +337,7 @@ mark {
         padding: 1.5rem 2rem 0rem 2rem;
     }
 
-    article {
+    section {
         padding: 1.5rem 0rem 2rem 0rem;
     }
 
