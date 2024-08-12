@@ -173,7 +173,7 @@ li::marker {
     color: var(--content-primary-default);
 }
 
-header, main, footer {
+header, main, nav, footer {
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -182,19 +182,21 @@ header, main, footer {
     flex-direction: column;
 }
 
-main, footer {
+main {
     gap: 2rem;
+    padding: 0rem 0rem 2rem 0rem;
 }
 
 header {
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
 }
 
 footer {
+    gap: 0.5rem;
     padding: 2rem 0rem 2.5rem 0rem;
 }
 
-article, section {
+article, section, aside {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -210,6 +212,27 @@ section {
 
 article {
     margin-bottom: 2.5rem;
+}
+
+aside {
+    gap: 2rem;
+    padding: 0rem 0rem 0rem 1.5rem;
+    border-left: var(--base-line);
+}
+
+aside p {
+    color: var(--content-secondary-default);
+}
+
+article section {
+    width: unset;
+    padding: unset;
+    border-bottom: unset;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 main section:nth-child(n+2):not(:last-child) article {
@@ -238,27 +261,6 @@ mark {
     white-space: nowrap;
 }
 
-.content-block, .content-extension {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.content-block {
-    gap: 0.5rem;
-}
-
-.content-extension {
-    gap: 2rem;
-    padding: 0rem 0rem 0rem 1.5rem;
-    border-left: var(--base-line);
-}
-
-.content-extension p {
-    color: var(--content-secondary-default);
-}
-
 .content-highlighted {
     background: var(--background-secondary-default);
     padding: 3rem 2.5rem;
@@ -267,11 +269,11 @@ mark {
     margin-left: -2.5rem;
 }
 
-.content-highlighted .content-extension {
+.content-highlighted aside {
     border-color: var(--border-secondary-default);
 }
 
-.content-highlighted .content-extension p, .content-highlighted .secondary {
+.content-highlighted aside p, .content-highlighted .secondary {
     color: var(--content-quaternary-default);
 }
 
