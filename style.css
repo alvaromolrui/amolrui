@@ -180,12 +180,14 @@ header, main, footer {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+}
+
+main, footer {
     gap: 2rem;
 }
 
 header {
-    padding: 2rem 0rem 2.5rem 0rem;
-    border-bottom: var(--base-line);
+    padding: 2rem 0rem 0rem 0rem;
 }
 
 main {
@@ -205,14 +207,16 @@ article, section {
     width: 100%;
 }
 
-article {
+section {
     padding: 2rem 0rem 2.5rem 0rem;
     border-bottom: var(--base-line);
 }
 
-section {
+article {
     margin-bottom: 2.5rem;
+}
 
+main section article {
     /*animation*/
     animation-name: scroll;
     animation-timeline: view();
@@ -220,10 +224,6 @@ section {
     animation-range-end: cover 50%;
     animation-fill-mode: both;
     animation-duration: 1ms;
-}
-
-#contact section {
-    animation: none !important;
 }
 
 @keyframes scroll {
