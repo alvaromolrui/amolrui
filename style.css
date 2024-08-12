@@ -173,7 +173,7 @@ li::marker {
     color: var(--content-primary-default);
 }
 
-header, main, nav, footer {
+header, main, footer {
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -184,7 +184,7 @@ header, main, nav, footer {
 
 main {
     gap: 2rem;
-    padding: 0rem 0rem 2rem 0rem;
+    padding: 0rem 0rem 1rem 0rem;
 }
 
 header {
@@ -193,7 +193,11 @@ header {
 
 footer {
     gap: 0.5rem;
-    padding: 2rem 0rem 2.5rem 0rem;
+    padding: 1rem 0rem 2.5rem 0rem;
+}
+
+footer a:first-child {
+    margin-bottom: 1.5rem;
 }
 
 article, section, aside {
@@ -203,6 +207,23 @@ article, section, aside {
     flex-direction: column;
     gap: 2rem;
     width: 100%;
+}
+
+details {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+summary {
+    font-weight: var(--bold);
+    font-style: normal;
+    font-size: var(--small);
 }
 
 section {
