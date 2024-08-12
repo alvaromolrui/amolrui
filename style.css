@@ -209,23 +209,6 @@ article, section, aside {
     width: 100%;
 }
 
-details {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-summary {
-    font-weight: var(--bold);
-    font-style: normal;
-    font-size: var(--small);
-}
-
 section {
     padding: 2rem 0rem 2.5rem 0rem;
     border-bottom: var(--base-line);
