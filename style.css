@@ -196,11 +196,11 @@ footer {
     padding: 1rem 0rem 2.5rem 0rem;
 }
 
-footer a:first-child {
+footer nav {
     margin-bottom: 1.5rem;
 }
 
-article, section, aside {
+article, section, nav, .description {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -218,13 +218,13 @@ article {
     margin-bottom: 2.5rem;
 }
 
-aside {
+.description {
     gap: 2rem;
     padding: 0rem 0rem 0rem 1.5rem;
     border-left: var(--base-line);
 }
 
-aside p {
+.description p {
     color: var(--content-secondary-default);
 }
 
@@ -273,11 +273,11 @@ mark {
     margin-left: -2.5rem;
 }
 
-.content-highlighted aside {
+.content-highlighted .description {
     border-color: var(--border-secondary-default);
 }
 
-.content-highlighted aside p, .content-highlighted .secondary {
+.content-highlighted .description p, .content-highlighted .secondary {
     color: var(--content-quaternary-default);
 }
 
