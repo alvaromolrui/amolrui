@@ -254,7 +254,7 @@ main section:nth-child(n+2):not(:last-child) article {
     100% {transform: translateY(0rem);}
 }
 
-mark {
+.tag {
     padding: 0.125rem 0.5rem; 
     background: none;
     border: var(--thin-line);
