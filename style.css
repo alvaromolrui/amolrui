@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-        
+   
+/*Variables*/
 :root {
     /*base*/
     --white01: hsl(343, 100%, 99%);
@@ -57,6 +58,7 @@
     --thin-line: 0.0625rem solid var(--border-primary-default);
 }
 
+/*Global properties*/
 * {
     /*margin-reset*/
     margin-block-start: 0rem;
@@ -86,80 +88,105 @@ body {
     background: var(--background-primary-default);
 }
 
-h1, h2, h3, h4, h4, h5 {
+a {
+    font-size: inherit;
+    font-weight: inherit;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*Typefaces*/
+.basic-title {
+    font-size: var(--bigger);
     font-weight: var(--bold);
     font-style: normal;
+    margin: 2rem 0rem 1.5rem 0rem;
 }
 
-h1 {
-    font-size: var(--bigger);
-}
-
-h2 {
+.small-title {
     font-size: var(--big);
+    font-weight: var(--bold);
+    font-style: normal;
+    margin: 1rem 0rem 0.5rem 0rem;
 }
 
-h3 {
+.big-subtitle {
     font-size: var(--medium);
+    font-weight: var(--bold);
+    font-style: normal;
+    margin: 2.5rem 0rem 0.5rem 0rem;
 }
 
-h4 {
+.basic-subtitle {
     font-size: var(--basic);
+    font-weight: var(--bold);
+    font-style: normal;
+    margin: 1rem 0rem 1rem 0rem;
 }
 
-h5 {
+.small-subtitle {
     font-size: var(--small);
+    font-weight: var(--bold);
+    font-style: normal;
+    margin: 1rem 0rem 0.5rem 0rem;
 }
 
-p {
+.basic-paragraph {
     font-size: var(--basic);
+    font-weight: var(--regular);
+    font-style: normal;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.small-paragraph {
+    font-size: var(--small);
     font-weight: var(--regular);
     font-style: normal;
 }
 
-i {
-    color: inherit;
+i, b {
     font-size: inherit;
+    color: inherit;
 }
 
-b {
-    color: inherit;
-    font-size: inherit;
-}
-
-a {
-    font-size: inherit;
-    color: var(--content-link-default);
-    outline: var(--base-line);
-    outline-color: transparent;
-    white-space: nowrap;
+/*Link*/
+.link {
     border-radius: 0.25rem;
+    color: var(--content-link-default);
     transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
-    
-    -webkit-tap-highlight-color: transparent;
 }
 
-@media (hover: hover) {
-    a:hover {
-        color: var(--content-link-hover);
-    }
-    .action:hover {
-        background: var(--background-secondary-hover);
-        color: var(--content-action-hover);
-    }
-}
-
-a:focus {
-    outline: var(--base-line);
-    outline-color: var(--border-link-default);
-
-}
-
-a:focus-visible {
+.link:focus {
     outline: var(--base-line);
     outline-color: var(--border-link-default);
 }
 
+.link:focus-visible {
+    outline: var(--base-line);
+    outline-color: var(--border-link-default);
+}
+
+/*Button*/
+.nav-button {
+    background: var(--background-secondary-default);
+    text-decoration: none;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    color: var(--content-action-default);
+    transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
+}
+
+.nav-button:focus {
+    outline: var(--base-line);
+    outline-color: var(--border-accent-default);
+}
+
+.nav-button:focus-visible {
+    outline: var(--base-line);
+    outline-color: var(--border-accent-default);
+}
+
+/*List*/
 ul {
     margin-left: -0.5rem;
 }
@@ -173,7 +200,69 @@ li::marker {
     color: var(--content-primary-default);
 }
 
-header, main, footer {
+/*Tag*/
+.tag-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.tag {
+    padding: 0.125rem 0.5rem; 
+    border: var(--thin-line);
+    border-color: var(--border-accent-default);
+    border-radius: 0.25rem;
+    font-size: var(--small);
+    color: var(--content-accent-default);
+    white-space: nowrap;
+}
+
+/*Contextual classes*/
+.emojis {
+    color: inherit;
+    font-size: inherit;
+}
+
+.accent-color {
+    color: var(--content-accent-default);
+}
+
+.secondary-color {
+    color: var(--content-secondary-default);
+}
+
+.regular-weight {
+    font-weight: var(--regular);
+}
+
+.align-right {
+    align-self: flex-end;
+}
+
+/*Content*/
+header {
+    padding: 0rem 0rem 1rem 0rem;
+}
+
+footer {
+    gap: 0.5rem;
+    padding: 1rem 0rem 2.5rem 0rem;
+}
+
+article {
+    padding: 0rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+section {
+    padding: 2rem 0rem 2.5rem 0rem;
+    border-bottom: var(--base-line);
+}
+
+.container {
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -182,65 +271,41 @@ header, main, footer {
     flex-direction: column;
 }
 
-main {
-    gap: 2rem;
-    padding: 0rem 0rem 1rem 0rem;
+.highlighted  {
+    background: var(--background-secondary-default);
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    margin: 2rem 0rem 2rem -2.5rem;
 }
 
-header {
-    padding: 2rem 0rem 1rem 0rem;
+.highlighted .description {
+    border-color: var(--border-secondary-default);
 }
 
-footer {
-    gap: 0.5rem;
-    padding: 1rem 0rem 2.5rem 0rem;
+.highlighted .basic-paragraph, .highlighted .secondary-color {
+    color: var(--content-quaternary-default);
 }
 
-footer nav {
-    margin-bottom: 1.5rem;
-}
-
-article, section, nav, .description {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-
-section {
-    padding: 2rem 0rem 2.5rem 0rem;
-    border-bottom: var(--base-line);
-}
-
-article {
-    margin-bottom: 2.5rem;
-}
-
-.description {
-    gap: 2rem;
-    padding: 0rem 0rem 0rem 1.5rem;
-    border-left: var(--base-line);
-}
-
-.description p {
+/*Layout corrections*/
+article p {
     color: var(--content-secondary-default);
 }
 
-article section {
-    width: unset;
-    padding: unset;
-    border-bottom: unset;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.5rem;
+main section:first-child {
+    padding: 0rem 0rem 2.5rem 0rem;
 }
 
-main section:nth-child(n+2):not(:last-child) article {
-    /*animation*/
+main section:first-child article {
+    padding: 0rem 0rem 1rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+footer nav {
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+/*Animation*/
+section:nth-child(n+1):not(:last-child) article {
     animation-name: scroll;
     animation-timeline: view();
     animation-range-start: cover 10%;
@@ -254,84 +319,15 @@ main section:nth-child(n+2):not(:last-child) article {
     100% {transform: translateY(0rem);}
 }
 
-.tag {
-    padding: 0.125rem 0.5rem; 
-    background: none;
-    border: var(--thin-line);
-    border-color: var(--border-accent-default);
-    border-radius: 0.25rem;
-    font-size: var(--small);
-    color: var(--content-accent-default);
-    white-space: nowrap;
-}
-
-.content-highlighted {
-    background: var(--background-secondary-default);
-    padding: 3rem 2.5rem;
-    border-radius: 1.5rem;
-    box-sizing: content-box;
-    margin-left: -2.5rem;
-}
-
-.content-highlighted .description {
-    border-color: var(--border-secondary-default);
-}
-
-.content-highlighted .description p, .content-highlighted .secondary {
-    color: var(--content-quaternary-default);
-}
-
-.tag-group {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.accent {
-    color: var(--content-accent-default);
-}
-
-.action {
-    background: var(--background-secondary-default);
-    text-decoration: none;
-    padding: 0.25rem 1rem;
-    border-radius: 2rem;
-    color: var(--content-action-default);
-    transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
-}
-
-.action:focus {
-    outline: var(--base-line);
-    outline-color: var(--border-accent-default);
-
-}
-
-.action:focus-visible {
-    outline: var(--base-line);
-    outline-color: var(--border-accent-default);
-}
-
-.secondary {
-    color: var(--content-secondary-default);
-}
-
-.regular {
-    font-weight: var(--regular);
-}
-
-.small {
-    font-size: var(--small);
-}
-
-.emojis {
-    color: inherit;
-    font-size: inherit;
-}
-
-.right {
-    align-self: flex-end;
+/*Media query*/
+@media (hover: hover) {
+    a:hover {
+        color: var(--content-link-hover);
+    }
+    .nav-button:hover {
+        background: var(--background-secondary-hover);
+        color: var(--content-action-hover);
+    }
 }
 
 @media (max-width: 800px) {
@@ -347,7 +343,7 @@ main section:nth-child(n+2):not(:last-child) article {
         padding: 1.5rem 0rem 2rem 0rem;
     }
 
-    .content-highlighted {
+    .highlighted {
         padding: 2.5rem 1.5rem;
         margin-left: -1.5rem;
     }
