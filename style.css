@@ -120,6 +120,13 @@
             box-sizing: border-box;
 }
 
+*:focus, *:focus-visible {
+    border-radius: inherit;
+    outline: var(--base-line);
+    outline-color: var(--border-tertiary-default);
+    transition: var(--base-transition);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -146,11 +153,17 @@ body {
     background: var(--background-primary-default);
 }
 
+a, button, label {
+    outline: var(--base-line);
+    outline-color: transparent;
+    transition: var(--base-transition);
+    -webkit-tap-highlight-color: transparent;
+}
+
 a {
     font-size: inherit;
     font-weight: inherit;
     white-space: nowrap;
-    -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -170,14 +183,6 @@ button {
     font-size: inherit;
     font-weight: inherit;
     border: none;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-*:focus-visible {
-    border-radius: 0.25rem !important;
-    outline: var(--base-line);
-    outline-color: var(--border-tertiary-default);
 }
 
 /*Typefaces*/
@@ -265,6 +270,7 @@ i, b {
             flex-direction: column;
     height: 2rem;
     width: 4rem;
+    border-radius: 2rem;
 }
 
 .theme-switch input {
