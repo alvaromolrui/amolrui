@@ -161,7 +161,7 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
-:focus, :focus-visible {
+*:focus-visible {
     border-radius: 0.25rem !important;
     outline: var(--base-line);
     outline-color: var(--border-tertiary-default);
@@ -252,7 +252,6 @@ i, b {
             flex-direction: column;
     height: 2rem;
     width: 4rem;
-    border-radius: 2rem;
 }
 
 .theme-switch input {
@@ -593,6 +592,22 @@ section:nth-child(n+1):not(:last-child) article {
     .highlighted {
         padding: 2.5rem 1.5rem 2.5rem 1.5rem;
         margin-left: -1.5rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        /*size*/
+        --font-size-enormous: calc((72 / 16) * 1rem);
+        --font-size-bigger: calc((54 / 16) * 1rem);
+        --font-size-big: calc((38 / 16) * 1rem);
+        --font-size-medium: calc((30 / 16) * 1rem);
+        --font-size-basic: calc((22 / 16) * 1rem);
+        --font-size-small: calc((18 / 16) * 1rem);
+    }
+
+    .container {
+        max-width: 1400px;
     }
 }
 
