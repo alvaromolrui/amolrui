@@ -89,7 +89,7 @@ function cleanUrlText(url) {
 // Success state
 function success(button) {
     toggleButtonClass(button);
-    updateText(button, '<span class="emojis" aria-hidden="true">✔ </span>¡Copiado!</span>');
+    updateText(button, '<span class="icon" aria-hidden="true">✔ </span>¡Copiado!</span>');
 
     // Disable button
     button.setAttribute('aria-disabled', 'true');
@@ -107,7 +107,7 @@ function success(button) {
     // Return to default state after 2 seconds
     setTimeout(() => {
         toggleButtonClass(button);
-        updateText(button, '<span class="emojis" aria-hidden="true">❏ </span>Copiar</span>');
+        updateText(button, '<span class="icon" aria-hidden="true">❏ </span>Copiar</span>');
 
         // Enable button
         button.removeAttribute('aria-disabled');
