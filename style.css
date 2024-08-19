@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap&family=Noto+Color+Emoji&display=swap');
 
 /*Variables*/
 :root {
@@ -458,8 +458,19 @@ input:checked + .slider:before {
 
 /*Contextual classes*/
 .emojis {
-    color: inherit;
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: inherit;
+    color: var(--content-accent-default);
+}
+
+.icons {
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    font-size: inherit;
+    color: inherit;
 }
 
 .accent-color {
