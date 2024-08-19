@@ -457,15 +457,7 @@ input:checked + .slider:before {
 }
 
 /*Contextual classes*/
-.emoji {
-    font-family: "Noto Color Emoji", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: inherit;
-    color: var(--content-accent-default);
-}
-
-.icon {
+.emoji, .icon {
     font-family: inherit;
     font-weight: inherit;
     font-style: normal;
