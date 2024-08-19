@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap&family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700');
 
 /*Variables*/
 :root {
@@ -126,6 +126,8 @@
     border-radius: inherit;
     outline: var(--base-line);
     outline-color: var(--border-tertiary-default);
+    -webkit-transition: var(--base-transition);
+    -o-transition: var(--base-transition);
     transition: var(--base-transition);
 }
 
@@ -160,6 +162,8 @@ body {
 a, button, label {
     outline: var(--base-line);
     outline-color: transparent;
+    -webkit-transition: var(--base-transition);
+    -o-transition: var(--base-transition);
     transition: var(--base-transition);
     -webkit-tap-highlight-color: transparent;
 }
@@ -548,25 +552,41 @@ dialog {
     inset-inline-start: 0rem;
     inset-inline-end: 0rem;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background-color: var(--background-primary-default);
     color: inherit;
     margin: auto;
     border: none;
     padding: 3rem;
-    animation: dialog .2s cubic-bezier(0.4, 0, 0.4, 1) forwards 1;
+    -webkit-animation: dialog .2s cubic-bezier(0.4, 0, 0.4, 1) forwards 1;
+            animation: dialog .2s cubic-bezier(0.4, 0, 0.4, 1) forwards 1;
 }
 
 dialog .big-subtitle {
     margin: 0;
 }
 
-@keyframes dialog {
+@-webkit-keyframes dialog {
     from {
-        transform: translateY(2rem); opacity: 0;
+        -webkit-transform: translateY(2rem);
+                transform: translateY(2rem); opacity: 0;
     }
     to {
-        transform: translateY(0rem); opacity: 1;
+        -webkit-transform: translateY(0rem);
+                transform: translateY(0rem); opacity: 1;
+    }
+}
+
+@keyframes dialog {
+    from {
+        -webkit-transform: translateY(2rem);
+                transform: translateY(2rem); opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0rem);
+                transform: translateY(0rem); opacity: 1;
     }
 }
 
@@ -575,6 +595,13 @@ dialog[open] {
     display: -ms-flexbox;
     display: flex;
     border-radius: 1rem;
+}
+
+dialog:-internal-dialog-in-top-layer::-webkit-backdrop {
+    position: fixed;
+    inset: 0rem;
+    background: var(--content-primary-default);
+    opacity: .5;
 }
 
 dialog:-internal-dialog-in-top-layer::backdrop {
@@ -589,8 +616,13 @@ dialog:-internal-dialog-in-top-layer {
     inset-block-start: 0rem;
     inset-block-end: 0rem;
     max-width: 800px;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
     max-height: fit-content;
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
     visibility: visible;
     overflow: auto;
 }
