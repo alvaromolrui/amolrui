@@ -58,7 +58,7 @@
 
         <nav aria-labelledby="go-to-contact" class="container">
 
-            <a id="go-to-contact" class="nav-button align-right basic-paragraph" href="#info" rel="noopener noreferrer" aria-label="Desplazarse a la sección con los datos de contacto" title="Desplazarse directamente a la sección con los datos de contacto">Ir a datos de contacto<span class="icon" aria-hidden="true"> ↓</span></a>
+            <a id="go-to-contact" class="nav-button align-right basic-paragraph text-ellipsis" href="#info" rel="noopener noreferrer" aria-label="Desplazarse a la sección con los datos de contacto" title="Desplazarse directamente a la sección con los datos de contacto">Ir a datos de contacto<span class="icon" aria-hidden="true"> ↓</span></a>
 
         </nav>
 
@@ -67,7 +67,7 @@
     <!--Experience-->
     <section aria-labelledby="experience" class="container">
 
-        <h2 id="experience" class="basic-title"><span class="emoji" aria-hidden="true">💼 </span>Experiencia</h2>
+        <h2 id="experience" class="basic-title text-ellipsis"><span class="emoji" aria-hidden="true">💼 </span>Experiencia</h2>
 
             <h3 class="big-subtitle content-secondary">Puesto actual</h3>
 
@@ -180,7 +180,7 @@
     <!--Volunteer-->
     <section aria-labelledby="volunteer" class="container">
 
-        <h2 id="volunteer" class="basic-title"><span class="emoji" aria-hidden="true">🛟 </span>Voluntariado</h2>
+        <h2 id="volunteer" class="basic-title text-ellipsis"><span class="emoji" aria-hidden="true">🛟 </span>Voluntariado</h2>
 
             <h3 class="big-subtitle content-secondary">Colaboración en curso</h3>
 
@@ -324,7 +324,7 @@
     <!--Acknowledgements-->
     <section aria-labelledby="acknowledgements" class="container">
 
-        <h2 id="acknowledgements" class="basic-title"><span class="emoji" aria-hidden="true">🏅 </span>Reconocimientos</h2>
+        <h2 id="acknowledgements" class="basic-title text-ellipsis"><span class="emoji" aria-hidden="true">🏅 </span>Reconocimientos</h2>
 
         <article aria-labelledby="award01" class="container highlighted">
 
@@ -349,7 +349,7 @@
 
                     <p aria-label="Contacto por Linkedin"><span class="emoji" aria-hidden="true">👤 </span><b>Linkedin</b>: </p>
 
-                    <a class="link" href="https://linkedin.com/in/alvaromolinaruiz/" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Linkedin" title="Ir al perfil del Linkedin">alvaromolinaruiz<span class="icon" aria-hidden="true"> ↗</span></a>
+                    <a class="link text-ellipsis" href="https://linkedin.com/in/alvaromolinaruiz/" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Linkedin" title="Ir al perfil del Linkedin">alvaromolinaruiz<span class="icon" aria-hidden="true"> ↗</span></a>
 
                     <button class="copy-button" aria-label="Copiar enlace del perfil al portapapeles" title="Copiar enlace del perfil al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
@@ -359,7 +359,7 @@
 
                     <p aria-label="Contacto por Correo"><span class="emoji" aria-hidden="true">✉️ </span><b>Correo</b>: </p>
 
-                    <a class="link" href="mailto:alvaromolrui@gmail.com" aria-label="Enviar un correo electrónico" title="Enviar un correo electrónico">alvaromolrui@gmail.com<span class="icon" aria-hidden="true"> ↗</span></a>
+                    <a class="link text-ellipsis" href="mailto:alvaromolrui@gmail.com" aria-label="Enviar un correo electrónico" title="Enviar un correo electrónico">alvaromolrui@gmail.com<span class="icon" aria-hidden="true"> ↗</span></a>
 
                     <button class="copy-button" aria-label="Copiar dirección de correo al portapapeles" title="Copiar dirección de correo al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
@@ -369,7 +369,7 @@
 
                     <p aria-label="Contacto por Teléfono"><span class="emoji" aria-hidden="true">📱 </span><b>Teléfono</b>: </p>
 
-                    <a class="link" href="tel:+34653265884" aria-label="Llamar por teléfono" title="Llamar por teléfono">(+34) 653 26 58 84<span class="icon" aria-hidden="true"> ↗</span></a>
+                    <a class="link text-ellipsis" href="tel:+34653265884" aria-label="Llamar por teléfono" title="Llamar por teléfono">(+34) 653 26 58 84<span class="icon" aria-hidden="true"> ↗</span></a>
 
                     <button class="copy-button" aria-label="Copiar número de teléfono al portapapeles" title="Copiar número de teléfono al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
@@ -411,12 +411,14 @@
 </footer>
 
 <dialog id="dialog">
-    <h2 class="big-subtitle">Uso de datos</h2>
-    <ul class="list">
-        <li class="item-list basic-paragraph">Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.</li>
-        <li class="item-list basic-paragraph">No se almacena información personal ni se rastrea la actividad de manera individualizada.</li>
-        <li class="item-list basic-paragraph">Esta web no utiliza cookies.</li>
-    </ul>
+    <article class="container">
+        <h2 class="big-subtitle">Uso de datos</h2>
+        <ul class="list">
+            <li class="item-list">Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.</li>
+            <li class="item-list">No se almacena información personal ni se rastrea la actividad de manera individualizada.</li>
+            <li class="item-list">Esta web no utiliza cookies.</li>
+        </ul>
+    </article>
     <button class="nav-button align-right" id="closeDialog" type="reset">Cerrar</button>
 </dialog>
 

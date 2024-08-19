@@ -135,12 +135,22 @@ function updateText(button, htmlContent) {
     var dialog = document.getElementById("dialog");
 
     // Update button opens a modal dialog
-    openDialog.addEventListener("click", function () {
+    openDialog.addEventListener("click", () => {
       dialog.showModal();
+      document.body.classList.add("scroll-fixed");
     });
 
     // Form cancel button closes the dialog box
-    closeButton.addEventListener("click", function () {
+    closeButton.addEventListener("click", () => {
       dialog.close();
+      document.body.removeAttribute("class");
+    });
+
+    // Close dialog on Escape key press
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && dialog.open) { // Check if dialog is open
+            dialog.close();
+            document.body.removeAttribute("class");
+        }
     });
   })();
