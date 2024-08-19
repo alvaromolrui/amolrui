@@ -351,7 +351,7 @@
 
                     <a class="link" href="https://linkedin.com/in/alvaromolinaruiz/" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Linkedin" title="Ir al perfil del Linkedin">alvaromolinaruiz<span class="icon" aria-hidden="true"> ↗</span></a>
 
-                    <button class="copy-button" aria-label="Copiar enlace del perfil al portapapeles" title="Copiar enlace del perfil al portapapeles" role="button" tabindex=""><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
+                    <button class="copy-button" aria-label="Copiar enlace del perfil al portapapeles" title="Copiar enlace del perfil al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
                 </li>
                 
@@ -361,7 +361,7 @@
 
                     <a class="link" href="mailto:alvaromolrui@gmail.com" aria-label="Enviar un correo electrónico" title="Enviar un correo electrónico">alvaromolrui@gmail.com<span class="icon" aria-hidden="true"> ↗</span></a>
 
-                    <button class="copy-button" aria-label="Copiar dirección de correo al portapapeles" title="Copiar dirección de correo al portapapeles" role="button" tabindex=""><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
+                    <button class="copy-button" aria-label="Copiar dirección de correo al portapapeles" title="Copiar dirección de correo al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
                 </li>
 
@@ -371,7 +371,7 @@
 
                     <a class="link" href="tel:+34653265884" aria-label="Llamar por teléfono" title="Llamar por teléfono">(+34) 653 26 58 84<span class="icon" aria-hidden="true"> ↗</span></a>
 
-                    <button class="copy-button" aria-label="Copiar número de teléfono al portapapeles" title="Copiar número de teléfono al portapapeles" role="button" tabindex=""><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
+                    <button class="copy-button" aria-label="Copiar número de teléfono al portapapeles" title="Copiar número de teléfono al portapapeles"><span class="copy-button-text"><span class="icon" aria-hidden="true">❏ </span>Copiar</span></button>
 
                 </li>
 
@@ -392,15 +392,32 @@
 
     </nav>
 
-    <p aria-label="Comentario sobre accesibilidad de la web" class="small-paragraph">Página web creada siguiendo las <a class="link" href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener noreferrer" aria-label="Ir a la página de la W3" title="Ir a la página de la W3">WCAG 2<span class="icon" aria-hidden="true"> ↗</span></a>, tratando de garantizar el nivel AAA.</p>
-    <p aria-label="Descarga del currículum en PDF" class="small-paragraph">Si quieres puedes <a class="link" href="assets/Álvaro Molina - Diseñador de producto.pdf" download aria-label="Descargar la versión PDF del currículum" title="Descargar la versión PDF del currículum">descargar la versión PDF<span class="icon" aria-hidden="true"> ↴</span></a>.</p>
-    <p aria-label="Nota sobre transparencia en el uso de datos" class="small-paragraph">Nota sobre <button class="link" id="openDialog" aria-label="Ver aviso de transparencia">transparencia<span class="icon" aria-hidden="true"> ↗ </span></button>en el uso de datos.</p>
+    <ul class="info-list" aria-label="Información al pie de página">
+
+        <li aria-labelledby="download-pdf" class="info-list-item small-paragraph">
+            <p id="download-pdf" aria-label="Descarga del currículum en PDF" class="small-paragraph">Si quieres puedes <a class="link" href="assets/Álvaro Molina - Diseñador de producto.pdf" download aria-label="Descargar la versión PDF del currículum" title="Descargar la versión PDF del currículum">descargar la versión PDF<span class="icon" aria-hidden="true"> ↴</span></a>.</p>
+        </li>
+
+        <li aria-labelledby="accesibility-comment" class="info-list-item small-paragraph">
+            <p id="accesibility-comment" aria-label="Comentario sobre accesibilidad de la web" class="small-paragraph">Página web creada siguiendo las <a class="link" href="https://www.w3.org/WAI/standards-guidelines/" target="_blank" rel="noopener noreferrer" aria-label="Ir a la página de la W3" title="Ir a la página de la W3">WCAG 2<span class="icon" aria-hidden="true"> ↗</span></a>, tratando de garantizar el nivel AAA.</p>
+        </li>
+
+        <li class="info-list-item small-paragraph" aria-label="Ver nota sobre transparencia en el uso de datos">
+            <button class="link" id="openDialog" title="Abrir ventana">Ver nota<span class="icon" aria-hidden="true">&nbsp;↗</span></button><p>sobre transparencia en el uso de datos.</p>
+        </li>
+
+    </ul>
 
 </footer>
 
 <dialog id="dialog">
-    <p class="basic-paragraph">Solamente se almacena en localStorage el esquema de color preferido por la persona usuaria. No se alamacena información personal ni se rastrear la actividad de manera individualizada.</p>
-    <button class="nav-button" id="closeDialog" type="reset">Salir</button>
+    <h2 class="big-subtitle">Uso de datos</h2>
+    <ul class="list">
+        <li class="item-list basic-paragraph">Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.</li>
+        <li class="item-list basic-paragraph">No se almacena información personal ni se rastrea la actividad de manera individualizada.</li>
+        <li class="item-list basic-paragraph">Esta web no utiliza cookies.</li>
+    </ul>
+    <button class="nav-button align-right" id="closeDialog" type="reset">Cerrar</button>
 </dialog>
 
 </body>

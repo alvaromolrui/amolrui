@@ -336,6 +336,9 @@ input:checked + .slider:before {
 /*Link*/
 .link {
     border-radius: 0.25rem;
+    text-decoration: underline;
+    background: none;
+    padding: 0rem;
     color: var(--content-link-default);
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
@@ -539,6 +542,7 @@ dialog {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 1rem;
     position: absolute;
     inset-inline-start: 0rem;
     inset-inline-end: 0rem;
@@ -548,14 +552,28 @@ dialog {
     color: inherit;
     margin: auto;
     border: none;
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 3rem;
+    animation: dialog .2s cubic-bezier(0.4, 0, 0.4, 1) forwards 1;
+}
+
+dialog .big-subtitle {
+    margin: 0;
+}
+
+@keyframes dialog {
+    from {
+        transform: translateY(2rem); opacity: 0;
+    }
+    to {
+        transform: translateY(0rem); opacity: 1;
+    }
 }
 
 dialog[open] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-radius: 1rem;
 }
 
 dialog:-internal-dialog-in-top-layer::backdrop {
@@ -570,7 +588,7 @@ dialog:-internal-dialog-in-top-layer {
     inset-block-start: 0rem;
     inset-block-end: 0rem;
     max-width: 800px;
-    max-height: auto;
+    max-height: fit-content;
     user-select: text;
     visibility: visible;
     overflow: auto;
@@ -681,69 +699,16 @@ section:nth-child(n+1):not(:last-child) article {
     }
 
     dialog {
-        display: none;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
         inset-inline-start: unset;
-        inset-inline-end: 0rem;
-        width: 100%;
-        height: fit-content;
-        background-color: var(--background-primary-default);
-        color: inherit;
-        margin: auto;
-        border: none;
         padding: 3rem 2rem 2rem 2rem;
+    }
+
+    dialog[open] {
         border-radius: 1rem 1rem 0rem 0rem;
     }
     
-    dialog[open] {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        animation: dialog .2s linear forwards 1;
-    }
-
-    @keyframes dialog {
-        from {
-            transform: translateY(12rem);
-        }
-        to {
-            transform: translateY(0rem);
-        }
-    }
-    
-    dialog:-internal-dialog-in-top-layer::backdrop {
-        position: fixed;
-        inset: 0rem;
-        background: var(--content-primary-default);
-        opacity: .8;
-    }
-    
     dialog:-internal-dialog-in-top-layer {
-        position: fixed;
         inset-block-start: unset;
-        inset-block-end: 0rem;
-        max-width: 800px;
-        max-height: fit-content;
-        user-select: text;
-        visibility: visible;
-        overflow: auto;
-    }
-    
-    dialog:modal {
-        overlay: auto !important;
     }
 
     dialog button {
