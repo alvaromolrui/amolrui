@@ -51,46 +51,79 @@ document.querySelector('.theme-switch').addEventListener('keydown', function(eve
     }
 });
 
-/*Copy to clipboard*/
-var copyButtonLinkedin = document.getElementById("copy-button-email");
 
-async function copy(url) {
+/*Copy to clipboard*/
+// Add event listeners
+document.querySelectorAll(".copy-button").forEach(button => {
+    button.addEventListener("click", function() {
+        const url = this.previousElementSibling.href || this.previousElementSibling.textContent.trim();
+        const cleanUrl = cleanUrlText(url);
+        copy(this, cleanUrl);
+    });
+});
+
+// Copy to clipboard function
+async function copy(button, url) {
     try {
         // Use Clipboard API to copy to clipboard
         await navigator.clipboard.writeText(url);
-
-        success();
-
         // Success confirmation
+        success(button);
         console.log("Enlace copiado al portapapeles: " + url);
-
     } catch (err) {
         // Something went wrong message
         console.error("Error al copiar al portapapeles: ", err);
     }
 }
 
-function success() {
-    copyButtonLinkedin.classList.remove("copy-button");
-    copyButtonLinkedin.classList.add("copy-button-success");
-
-    successText();
-
-    setTimeout(() => {
-        copyButtonLinkedin.classList.add("copy-button");
-        copyButtonLinkedin.classList.remove("copy-button-success");
-        defaultText();
-    }, 2000)
+// Clean copied url
+function cleanUrlText(url) {
+    if (url.startsWith("mailto:")) {
+        return url.replace("mailto:", "");
+    } else if (url.startsWith("tel:")) {
+        return url.replace("tel:", "");
+    }
+    return url;  // Return cleanned url
 }
 
-function successText() {
-    var emailText = document.getElementById("copy-button-email-text");
+// Success state
+function success(button) {
+    toggleButtonClass(button);
+    updateText(button, '<span class="emojis" aria-hidden="true">✔ </span>¡Copiado!</span>');
 
-    emailText.innerHTML = '<span class="emojis" aria-hidden="true">✔ </span>¡Copiado!</span>';
-  }
+    // Disable button
+    button.setAttribute('aria-disabled', 'true');
 
-  function defaultText() {
-    var emailText = document.getElementById("copy-button-email-text");
+    // Disable keyboard interaction
+    const handleKeydown = function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+        }
+    };
 
-    emailText.innerHTML = '<span class="emojis" aria-hidden="true">❏ </span>Copiar</span>';
-  }
+    // Add event listener to keyboard interaction
+    button.addEventListener('keydown', handleKeydown);
+
+    // Return to default state after 2 seconds
+    setTimeout(() => {
+        toggleButtonClass(button);
+        updateText(button, '<span class="emojis" aria-hidden="true">❏ </span>Copiar</span>');
+
+        // Enable button
+        button.removeAttribute('aria-disabled');
+
+        // Enable keyboard interaction
+        button.removeEventListener('keydown', handleKeydown);
+    }, 2000);
+}
+
+// Add success class to the button
+function toggleButtonClass(button) {
+    button.classList.toggle("copy-button-success");
+}
+
+// Update button text
+function updateText(button, htmlContent) {
+    const buttonText = button.querySelector(".copy-button-text");
+    buttonText.innerHTML = htmlContent;
+}

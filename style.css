@@ -55,6 +55,8 @@
     --background-secondary-default: #f2e8eb;
     --background-secondary-hover: #d2c6c9;
 
+    --background-success-default: #0C612E;
+
     --background-accent-default: #971130;
 
     /*lightmode-border-colors*/
@@ -86,6 +88,8 @@
     --background-secondary-default: #2D2023;
     --background-secondary-hover: #392D30;
 
+    --background-success-default: #a4efc2;
+
     --background-accent-default: #f792a9;
 
     /*darkmode-border-colors*/
@@ -111,7 +115,6 @@
 
     /*font*/
     font-family: "Space Mono", monospace, "Geneva", Verdana, sans-serif;
-    color: var(--content-primary-default);
 }
 
 *, *::before, *::after {
@@ -131,6 +134,8 @@ html {
 }
 
 body {
+        
+        color: var(--content-primary-default);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -159,7 +164,7 @@ a, button, label {
     -webkit-tap-highlight-color: transparent;
 }
 
-a {
+a, button {
     font-size: inherit;
     font-weight: inherit;
     white-space: nowrap;
@@ -179,8 +184,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    font-size: inherit;
-    font-weight: inherit;
     border: none;
 }
 
@@ -365,17 +368,9 @@ input:checked + .slider:before {
 }
 
 .copy-button-success {
-    gap: 0.5rem;
-    cursor: pointer;
-    background: var(--background-accent-default);
-    text-decoration: none;
-    padding: 0.125rem 0.5rem;
-    border-radius: 2rem;
-    color: var(--content-action-default);
-    -webkit-transition: var(--base-transition);
-         -o-transition: var(--base-transition);
-            transition: var(--base-transition);
-    vertical-align: middle;
+    pointer-events: none;
+    background: var(--background-success-default);
+    color: var(--content-tertiary-default);
 }
 
 /*List*/
