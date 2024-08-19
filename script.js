@@ -127,3 +127,20 @@ function updateText(button, htmlContent) {
     const buttonText = button.querySelector(".copy-button-text");
     buttonText.innerHTML = htmlContent;
 }
+
+/*Privacy dialog*/
+(function privacyDialog() {
+    var openDialog = document.getElementById("openDialog");
+    var closeButton = document.getElementById("closeDialog");
+    var dialog = document.getElementById("dialog");
+
+    // Update button opens a modal dialog
+    openDialog.addEventListener("click", function () {
+      dialog.showModal();
+    });
+
+    // Form cancel button closes the dialog box
+    closeButton.addEventListener("click", function () {
+      dialog.close();
+    });
+  })();
