@@ -335,6 +335,7 @@ input:checked + .slider:before {
 
 /*Link*/
 .link {
+    display: inline-block;
     border-radius: 0.25rem;
     text-decoration: underline;
     background: none;
@@ -620,6 +621,10 @@ footer nav {
     margin: 1rem 0rem 2rem 0rem;
 }
 
+footer .info-list {
+    gap: 1rem;
+}
+
 /*Animation*/
 section:nth-child(n+1):not(:last-child) article {
     -webkit-animation-name: scroll;
@@ -659,7 +664,7 @@ section:nth-child(n+1):not(:last-child) article {
 
 /*Media query*/
 @media (hover: hover) {
-    a:hover {
+    .link:hover {
         color: var(--content-link-hover);
     }
 
