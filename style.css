@@ -460,6 +460,7 @@ input:checked + .slider:before {
     background: var(--background-secondary-default);
     padding: 0.25rem 1rem;
     border-radius: 2rem;
+    text-decoration: none;
     color: var(--content-action-default);
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
