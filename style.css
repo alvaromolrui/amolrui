@@ -34,6 +34,44 @@
     --base-transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
 }
 
+/* Scrollbar Styling*/
+@supports (-webkit-appearance: none) {
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--background-secondary-default);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        border-radius: 2rem;
+        border: solid 4px var(--background-secondary-default);
+        background: var(--content-secondary-default);
+    }
+}
+
+@supports not (-webkit-appearance: none) {
+    html {
+        scrollbar-gutter: stable;
+    }
+
+    body {
+        scrollbar-color: var(--content-secondary-default) var(--background-secondary-default);
+    }
+}
+
+@supports (scrollbar-gutter: stable) {
+    html {
+        scrollbar-gutter: stable;
+    }
+
+    body {
+        scrollbar-color: var(--content-secondary-default) var(--background-secondary-default);
+    }
+}
+
 /*color-schemes*/
 [data-theme="light"] {
     /*lightmode-content-colors*/
@@ -149,8 +187,6 @@
 }
 
 html {
-    scrollbar-gutter: stable;
-    background-color: var(--scroll-gutter-background);
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
        -moz-text-size-adjust: 100%;
