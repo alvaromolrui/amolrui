@@ -39,6 +39,7 @@
     /*lightmode-content-colors*/
     --content-primary-default: #100f0f;
     --content-secondary-default: #595454;
+    --content-secondary-hover: #444040;
     --content-tertiary-default: #fffafb;
     --content-quaternary-default: #444040;
 
@@ -70,12 +71,16 @@
 
     --border-accent-default: #971130;
     --border-link-default: #214e83;
+
+    /*lightmode-scrollbar-gutter-color*/
+    --scroll-gutter-background: #403E3E;
 }
 
 [data-theme="dark"] {
     /*darkmode-content-colors*/
     --content-primary-default: #f0efef;
     --content-secondary-default: #aba6a6;
+    --content-secondary-hover: #bfbbbb;
     --content-tertiary-default: #0f0003;
     --content-quaternary-default: #bfbbbb;
 
@@ -96,7 +101,7 @@
 
     --background-accent-default: #f792a9;
 
-    /*lightmode-overlay-color*/
+    /*darkmode-overlay-color*/
     --overlay-primary-initial-default: rgb(240 239 239 /0%);
     --overlay-primary-final-default: rgb(240 239 239 /40%);
 
@@ -107,6 +112,9 @@
     
     --border-accent-default: #f792a9;
     --border-link-default: #89b2e1;
+
+    /*darkmode-scrollbar-gutter-color*/
+    --scroll-gutter-background: #6D686A;
 }
 
 /*Global properties*/
@@ -141,6 +149,8 @@
 }
 
 html {
+    scrollbar-gutter: stable;
+    background-color: var(--scroll-gutter-background);
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
        -moz-text-size-adjust: 100%;
@@ -154,6 +164,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -199,6 +211,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -316,6 +330,8 @@ i, b {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -340,6 +356,8 @@ i, b {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -404,7 +422,6 @@ input:checked + .slider:before {
 /*Buttons*/
 .nav-button {
     background: var(--background-secondary-default);
-    text-decoration: none;
     padding: 0.25rem 1rem;
     border-radius: 2rem;
     color: var(--content-action-default);
@@ -460,6 +477,8 @@ input:checked + .slider:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -495,6 +514,8 @@ input:checked + .slider:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -513,6 +534,8 @@ input:checked + .slider:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -617,23 +640,19 @@ dialog .item-list:first-child {
     margin-top: 0rem;
 }
 
+dialog .big-subtitle {
+    margin: 0;
+}
+
 dialog[open] {
     border-radius: 1.5rem;
     -webkit-animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
             animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
 }
 
-.handler {
-    display: none;
-    align-self: center;
-    width: 4rem;
-    height: 0.5rem;
-    min-height: 0.5rem;
-    background-color: var(--border-secondary-default);
-    border-radius: 2rem;
-}
-
 dialog {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
         justify-content: center;
@@ -650,6 +669,7 @@ dialog {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    min-height: 12rem;
     max-height: calc(100% - 2rem);
     background-color: var(--background-primary-default);
     color: inherit;
@@ -662,6 +682,9 @@ dialog {
             user-select: text;
     visibility: visible;
     overflow: hidden;
+    -webkit-transition: var(--base-transition) allow-discrete;
+    -o-transition: var(--base-transition) allow-discrete;
+    transition: var(--base-transition) allow-discrete;
     -webkit-animation: dialog-fade-out .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
             animation: dialog-fade-out .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
 }
@@ -736,10 +759,6 @@ dialog {
         -webkit-transform: translateY(4rem);
                 transform: translateY(4rem);
     }
-}
-
-dialog .big-subtitle {
-    margin: 0;
 }
 
 dialog::-webkit-backdrop {
@@ -932,10 +951,6 @@ section:nth-child(n+2):not(:last-child) article {
 
     dialog button {
         width: 100%;
-    }
-
-    .handler {
-        display: block;
     }
 
     dialog {

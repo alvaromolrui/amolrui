@@ -410,14 +410,18 @@
 
 </footer>
 
-<dialog id="dialog">
+<dialog aria-labelledby="privacy-notes" id="dialog">
+
     <div role="button" aria-hidden="true" id="swipeHandle" class="handler"></div>
-    <h2 class="big-subtitle big-subtitle-margin">Uso de datos</h2>
-        <ul class="container list basic-paragraph">
-            <li class="item-list">Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.</li>
-            <li class="item-list">No se almacena información personal ni se rastrea la actividad de manera individualizada.</li>
-            <li class="item-list">Esta web no utiliza cookies.</li>
-        </ul>
+
+    <h2 id="data-usage" class="big-subtitle big-subtitle-margin">Uso de datos</h2>
+
+    <ul aria-label="Lista de uso de datos" class="container list basic-paragraph">
+        <li aria-label="Caso uno" class="item-list">Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.</li>
+        <li aria-label="Caso dos" class="item-list">No se almacena información personal ni se rastrea la actividad de manera individualizada.</li>
+        <li aria-label="Caso tres" class="item-list">Esta web no utiliza cookies.</li>
+    </ul>
+
     <button class="nav-button align-right" id="closeDialog"><span class="icon" aria-hidden="true">✕&nbsp;</span>Cerrar</button>
 </dialog>
 
