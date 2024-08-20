@@ -712,7 +712,7 @@ dialog {
     color: inherit;
     margin: auto;
     border: none;
-    padding: 3rem;
+    padding: 4rem 3rem 3rem 3rem;
     -webkit-user-select: text;
        -moz-user-select: text;
         -ms-user-select: text;
@@ -992,7 +992,7 @@ section:nth-child(n+2):not(:last-child) article {
 
     dialog {
         margin: auto 0 0 0;
-        padding: 0.5rem 2rem 2rem 2rem;
+        padding: 3rem 2rem 2rem 2rem;
     }
 
     dialog[open] {
