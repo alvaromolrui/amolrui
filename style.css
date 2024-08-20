@@ -193,7 +193,6 @@ a, button {
     letter-spacing: inherit;
     line-height: inherit;
     font-style: inherit;
-    white-space: nowrap;
 }
 
 button {
@@ -412,6 +411,11 @@ input:checked + .slider:before {
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
             transition: var(--base-transition);
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    
 }
 
 .copy-button {
@@ -607,7 +611,10 @@ dialog .container {
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow: auto;
-    margin: 1rem 0rem;
+}
+
+dialog .item-list:first-child {
+    margin-top: 0rem;
 }
 
 dialog[open] {
@@ -621,9 +628,9 @@ dialog[open] {
     align-self: center;
     width: 4rem;
     height: 0.5rem;
+    min-height: 0.5rem;
     background-color: var(--border-secondary-default);
     border-radius: 2rem;
-    margin-bottom: 2rem;
 }
 
 dialog {
@@ -638,11 +645,12 @@ dialog {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    gap: 1rem;
     max-width: 800px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    max-height: calc(100% - 4rem);
+    max-height: calc(100% - 2rem);
     background-color: var(--background-primary-default);
     color: inherit;
     margin: auto;
@@ -845,7 +853,33 @@ section:nth-child(n+2):not(:last-child) article {
     }
 }
 
-@media (max-width: 800px) {
+@media (prefers-reduced-motion) {
+    * {
+        -webkit-animation: none !important;
+                animation: none !important;
+        -webkit-transition: none !important;
+             -o-transition: none !important;
+                transition: none !important;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    :root {
+        /*size*/
+        --font-size-enormous: calc((72 / 16) * 1rem);
+        --font-size-bigger: calc((54 / 16) * 1rem);
+        --font-size-big: calc((38 / 16) * 1rem);
+        --font-size-medium: calc((30 / 16) * 1rem);
+        --font-size-basic: calc((22 / 16) * 1rem);
+        --font-size-small: calc((18 / 16) * 1rem);
+    }
+
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     :root {
         /*size*/
         --font-size-enormous: calc((40 / 16) * 1rem);
@@ -878,6 +912,23 @@ section:nth-child(n+2):not(:last-child) article {
     .list {
         padding-left: 1.5rem;
     }
+}
+
+@media only screen and (max-width: 560px) {
+    .info-list-item {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
 
     dialog button {
         width: 100%;
@@ -894,31 +945,5 @@ section:nth-child(n+2):not(:last-child) article {
 
     dialog[open] {
         border-radius: 1.5rem 1.5rem 0rem 0rem;
-    }
-}
-
-@media (min-width: 2560px) {
-    :root {
-        /*size*/
-        --font-size-enormous: calc((72 / 16) * 1rem);
-        --font-size-bigger: calc((54 / 16) * 1rem);
-        --font-size-big: calc((38 / 16) * 1rem);
-        --font-size-medium: calc((30 / 16) * 1rem);
-        --font-size-basic: calc((22 / 16) * 1rem);
-        --font-size-small: calc((18 / 16) * 1rem);
-    }
-
-    .container {
-        max-width: 1400px;
-    }
-}
-
-@media (prefers-reduced-motion) {
-    * {
-        -webkit-animation: none !important;
-                animation: none !important;
-        -webkit-transition: none !important;
-             -o-transition: none !important;
-                transition: none !important;
     }
 }
