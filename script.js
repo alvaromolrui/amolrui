@@ -128,29 +128,70 @@ function updateText(button, htmlContent) {
     buttonText.innerHTML = htmlContent;
 }
 
-/*Privacy dialog*/
+/* Privacy dialog */
 (function privacyDialog() {
-    var openDialog = document.getElementById("openDialog");
-    var closeButton = document.getElementById("closeDialog");
-    var dialog = document.getElementById("dialog");
+    const openDialog = document.getElementById("openDialog");
+    const closeDialog = document.getElementById("closeDialog");
+    const dialog = document.getElementById("dialog");
+    const swipeHandle = document.getElementById("swipeHandle"); // El elemento manejador
 
-    // Update button opens a modal dialog
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      document.body.classList.add("scroll-fixed");
-    });
+    let touchStartY = 0;
+    let touchEndY = 0;
+    const swipeThreshold = 50; // Umbral mínimo de swipe (en píxeles)
 
-    // Form cancel button closes the dialog box
-    closeButton.addEventListener("click", () => {
-      dialog.close();
-      document.body.removeAttribute("class");
-    });
+    // Function to open the dialog
+    const openDialogHandler = () => {
+        dialog.showModal();
+        document.body.classList.add("scroll-fixed");
+        setTimeout(() => closeDialog.focus(), 100);
+    };
 
-    // Close dialog on Escape key press
+    // Function to close the dialog
+    const closeDialogHandler = () => {
+        dialog.close();
+        document.body.classList.remove("scroll-fixed");
+    };
+
+    // Open dialog on button click
+    openDialog.addEventListener("click", openDialogHandler);
+
+    // Close dialog on button click or Escape key press
+    closeDialog.addEventListener("click", closeDialogHandler);
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && dialog.open) { // Check if dialog is open
-            dialog.close();
-            document.body.removeAttribute("class");
+        if (event.key === "Escape" && dialog.open) {
+            closeDialogHandler();
         }
     });
-  })();
+
+    // Close dialog on overlay click
+    dialog.addEventListener("click", (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const isInDialog = (
+            event.clientX >= rect.left &&
+            event.clientX <= rect.right &&
+            event.clientY >= rect.top &&
+            event.clientY <= rect.bottom
+        );
+
+        if (!isInDialog) {
+            closeDialogHandler();
+        }
+    });
+
+    // Detect touch start on the swipe handle
+    swipeHandle.addEventListener("touchstart", (event) => {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    // Detect touch move on the swipe handle
+    swipeHandle.addEventListener("touchmove", (event) => {
+        touchEndY = event.touches[0].clientY;
+    });
+
+    // Detect touch end and check if swipe down occurred on the swipe handle
+    swipeHandle.addEventListener("touchend", () => {
+        if ((touchEndY - touchStartY) > swipeThreshold) {
+            closeDialogHandler();
+        }
+    });
+})();
