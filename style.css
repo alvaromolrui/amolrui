@@ -65,6 +65,7 @@
 @supports (scrollbar-gutter: stable) {
     html {
         scrollbar-gutter: stable;
+        background-color: var(--scroll-gutter-background);
     }
 
     body {
