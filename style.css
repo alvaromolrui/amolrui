@@ -98,6 +98,7 @@
     --background-success-default: #0C612E;
 
     --background-accent-default: #971130;
+    --background-accent-hover: #7C0E27;
 
     /*lightmode-overlay-colors*/
     --overlay-primary-initial-default: rgb(16 15 15 /0%);
@@ -139,6 +140,7 @@
     --background-success-default: #a4efc2;
 
     --background-accent-default: #f792a9;
+    --background-accent-hover: #F57A96;
 
     /*darkmode-overlay-color*/
     --overlay-primary-initial-default: rgb(240 239 239 /0%);
@@ -179,7 +181,6 @@
 
 *:focus, *:focus-visible {
     border-radius: inherit;
-    background: inherit;
     outline: var(--base-line);
     outline-color: var(--border-tertiary-default);
     -webkit-transition: var(--base-transition);
@@ -458,11 +459,11 @@ input:checked + .slider:before {
 
 /*Buttons*/
 .nav-button {
-    background: var(--background-secondary-default);
+    background: var(--background-accent-default);
     padding: 0.25rem 1rem;
     border-radius: 2rem;
     text-decoration: none;
-    color: var(--content-action-default);
+    color: var(--content-tertiary-default);
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
             transition: var(--base-transition);
@@ -470,7 +471,6 @@ input:checked + .slider:before {
     overflow: hidden;
     -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
-    
 }
 
 .copy-button {
@@ -488,9 +488,18 @@ input:checked + .slider:before {
 }
 
 .copy-button-success {
-    pointer-events: none;
+    gap: 0.5rem;
+    cursor: inherit;
     background: var(--background-success-default);
+    text-decoration: none;
+    padding: 0.125rem 0.5rem;
+    border-radius: 2rem;
     color: var(--content-tertiary-default);
+    -webkit-transition: var(--base-transition);
+         -o-transition: var(--base-transition);
+            transition: var(--base-transition);
+    vertical-align: middle;
+    pointer-events: none;
 }
 
 /*List*/
@@ -701,8 +710,8 @@ dialog {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
     gap: 1rem;
+    width: calc(100% - 4rem);
     max-width: 800px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -720,6 +729,9 @@ dialog {
             user-select: text;
     visibility: visible;
     overflow: hidden;
+    -webkit-box-shadow: 2px 2px 40px 0px var(--overlay-primary-final-default);
+       -moz-box-shadow: 2px 2px 40px 0px var(--overlay-primary-final-default);
+            box-shadow: 2px 2px 40px 0px var(--overlay-primary-final-default);
     -webkit-transition: var(--base-transition) allow-discrete;
     -o-transition: var(--base-transition) allow-discrete;
     transition: var(--base-transition) allow-discrete;
@@ -900,8 +912,7 @@ section:nth-child(n+2):not(:last-child) article {
     }
 
     .nav-button:hover {
-        background: var(--background-secondary-hover);
-        color: var(--content-action-hover);
+        background: var(--background-accent-hover);
     }
 
     .copy-button:hover {
@@ -934,6 +945,10 @@ section:nth-child(n+2):not(:last-child) article {
     .container {
         max-width: 1400px;
     }
+
+    dialog {
+        max-width: 1000px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -945,6 +960,10 @@ section:nth-child(n+2):not(:last-child) article {
         --font-size-medium: calc((20 / 16) * 1rem);
         --font-size-basic: calc((16 / 16) * 1rem);
         --font-size-small: calc((14 / 16) * 1rem);
+    }
+
+    html {
+        scrollbar-gutter: auto;
     }
 
     body {
@@ -969,6 +988,20 @@ section:nth-child(n+2):not(:last-child) article {
     .list {
         padding-left: 1.5rem;
     }
+
+    dialog {
+        width: 100%;
+        margin: auto 0 0 0;
+        padding: 3rem 2rem 2rem 2rem;
+    }
+
+    dialog button {
+        width: 100%;
+    }
+
+    dialog[open] {
+        border-radius: 1.5rem 1.5rem 0rem 0rem;
+    }
 }
 
 @media only screen and (max-width: 560px) {
@@ -985,18 +1018,5 @@ section:nth-child(n+2):not(:last-child) article {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-    }
-
-    dialog button {
-        width: 100%;
-    }
-
-    dialog {
-        margin: auto 0 0 0;
-        padding: 3rem 2rem 2rem 2rem;
-    }
-
-    dialog[open] {
-        border-radius: 1.5rem 1.5rem 0rem 0rem;
     }
 }

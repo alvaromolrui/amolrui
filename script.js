@@ -119,6 +119,7 @@ function success(button) {
 
 // Add success class to the button
 function toggleButtonClass(button) {
+    button.classList.toggle("copy-button");
     button.classList.toggle("copy-button-success");
 }
 
