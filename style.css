@@ -36,7 +36,7 @@
     /*colors*/
     --content-primary-default: var(--yloria-01);
     --content-secondary-default: var(--yloria-03);
-    --content-secondary-hover: var(--yloria-02);
+    --content-secondary-hover: var(--yloria-02);/**/
     --content-tertiary-default: var(--orbis-01);
     --content-quaternary-default: var(--yloria-02);
     --content-accent-default: var(--zenithar-01);
@@ -46,7 +46,6 @@
     --content-link-hover: var(--novara-02);
 
     --background-primary-default: var(--orbis-01);
-    --background-primary-hover: var(--orbis-02);
     --background-secondary-default: var(--orbis-02);
     --background-secondary-hover: var(--orbis-04);
     --background-success-default: var(--nexis-01);
@@ -54,10 +53,8 @@
     --background-accent-hover: var(--zenithar-02);
 
     --border-primary-default: var(--orbis-03);
-    --border-secondary-default: var(--orbis-04);
-    --border-tertiary-default: var(--yloria-01);
+    --border-secondary-default: var(--yloria-01);
     --border-accent-default: var(--zenithar-01);
-    --border-link-default: var(--novara-01);
 
     --overlay-primary-initial-default: var(--orbis-05);
     --overlay-primary-final-default: var(--orbis-06);
@@ -167,7 +164,7 @@
 *:focus, *:focus-visible {
     border-radius: inherit;
     outline: var(--base-line);
-    outline-color: var(--border-tertiary-default);
+    outline-color: var(--border-secondary-default);
     -webkit-transition: var(--base-transition);
     -o-transition: var(--base-transition);
     transition: var(--base-transition);
