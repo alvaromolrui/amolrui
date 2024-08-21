@@ -675,6 +675,7 @@ dialog .item-list:last-child {
 }
 
 dialog[open] {
+    visibility: visible;
     border-radius: 1.5rem;
     -webkit-animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
             animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
