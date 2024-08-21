@@ -696,7 +696,7 @@ dialog[open] {
 }
 
 dialog {
-    background-color: var(--background-primary-default);
+    background-color: var(--background-secondary-default);
     color: inherit;
     margin: auto;
     border: none;
