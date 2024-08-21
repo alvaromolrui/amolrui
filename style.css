@@ -38,7 +38,7 @@
     --content-secondary-default: var(--yloria-03);
     --content-secondary-hover: var(--yloria-02);
     --content-tertiary-default: var(--orbis-01);
-    --content-quaternary-default: var(orbisyloria-02);
+    --content-quaternary-default: var(--yloria-02);
     --content-accent-default: var(--zenithar-01);
     --content-action-default: var(--yloria-01);
     --content-action-hover: var(--yloria-01);
@@ -46,8 +46,8 @@
     --content-link-hover: var(--novara-02);
 
     --background-primary-default: var(--orbis-01);
-    --background-primary-hover: var(--oaOrbis-02);
-    --background-secondary-default: var(--background-02);
+    --background-primary-hover: var(--orbis-02);
+    --background-secondary-default: var(--orbis-02);
     --background-secondary-hover: var(--orbis-04);
     --background-success-default: var(--nexis-01);
     --background-accent-default: var(--zenithar-01);
