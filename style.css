@@ -687,6 +687,7 @@ dialog {
     border: none;
     padding: 4rem 3rem 3rem 3rem;
     overflow: hidden;
+    visibility: hidden;
     -webkit-box-shadow: 0.125rem 0.125rem 2.5rem 0rem var(--overlay-primary-final-default);
        -moz-box-shadow: 0.125rem 0.125rem 2.5rem 0rem var(--overlay-primary-final-default);
             box-shadow: 0.125rem 0.125rem 2.5rem 0rem var(--overlay-primary-final-default);
