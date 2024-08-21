@@ -32,6 +32,37 @@
 
     /*transition*/
     --base-transition: all .2s cubic-bezier(0.4, 0, 0.4, 1);
+
+    /*colors*/
+    --content-primary-default: var(--yloria-01);
+    --content-secondary-default: var(--yloria-03);
+    --content-secondary-hover: var(--yloria-02);
+    --content-tertiary-default: var(--orbis-01);
+    --content-quaternary-default: var(orbisyloria-02);
+    --content-accent-default: var(--zenithar-01);
+    --content-action-default: var(--yloria-01);
+    --content-action-hover: var(--yloria-01);
+    --content-link-default: var(--novara-01);
+    --content-link-hover: var(--novara-02);
+
+    --background-primary-default: var(--orbis-01);
+    --background-primary-hover: var(--oaOrbis-02);
+    --background-secondary-default: var(--background-02);
+    --background-secondary-hover: var(--orbis-04);
+    --background-success-default: var(--nexis-01);
+    --background-accent-default: var(--zenithar-01);
+    --background-accent-hover: var(--zenithar-02);
+
+    --border-primary-default: var(--orbis-03);
+    --border-secondary-default: var(--orbis-04);
+    --border-tertiary-default: var(--yloria-01);
+    --border-accent-default: var(--zenithar-01);
+    --border-link-default: var(--novara-01);
+
+    --overlay-primary-initial-default: var(--orbis-05);
+    --overlay-primary-final-default: var(--orbis-06);
+
+    --scroll-gutter-background: var(--yloria-04);
 }
 
 /* Scrollbar Styling*/
@@ -75,89 +106,41 @@
 
 /*color-schemes*/
 [data-theme="light"] {
-    /*lightmode-content-colors*/
-    --content-primary-default: #100f0f;
-    --content-secondary-default: #595454;
-    --content-secondary-hover: #444040;
-    --content-tertiary-default: #fffafb;
-    --content-quaternary-default: #444040;
-
-    --content-accent-default: #971130;
-    --content-action-default: #100f0f;
-    --content-action-hover: #100f0f;
-
-    /*lightmode-link-colors*/
-    --content-link-default: #214e83;
-    --content-link-hover: #4184be;
-
-    /*lightmode-background-colors*/
-    --background-primary-default: #fffafb;
-    --background-primary-hover: #f2e8eb;
-    --background-secondary-default: #f2e8eb;
-    --background-secondary-hover: #d2c6c9;
-
-    --background-success-default: #0C612E;
-
-    --background-accent-default: #971130;
-    --background-accent-hover: #7C0E27;
-
-    /*lightmode-overlay-colors*/
-    --overlay-primary-initial-default: rgb(16 15 15 /0%);
-    --overlay-primary-final-default: rgb(16 15 15 /80%);
-
-    /*lightmode-border-colors*/
-    --border-primary-default: #e0d2d6;
-    --border-secondary-default: #d2c6c9;
-    --border-tertiary-default: #100f0f;
-
-    --border-accent-default: #971130;
-    --border-link-default: #214e83;
-
-    /*lightmode-scrollbar-gutter-color*/
-    --scroll-gutter-background: #403E3E;
+    /*lightmode-colors*/
+    --yloria-01: #100F0F;
+    --yloria-02: #444040;
+    --yloria-03: #595454;
+    --yloria-04: #403E3E;
+    --orbis-01: #FFFAFB;
+    --orbis-02: #F2E8EB;
+    --orbis-03: #E0D2D6;
+    --orbis-04: #D2C6C9;
+    --orbis-05: rgb(16 15 15 /0%);
+    --orbis-06: rgb(16 15 15 /80%);
+    --novara-01: #214E83;
+    --novara-02: #4184BE;
+    --nexis-01: #0C612E;
+    --zenithar-01: #971130;
+    --zenithar-02: #7C0E27;
 }
 
 [data-theme="dark"] {
-    /*darkmode-content-colors*/
-    --content-primary-default: #f0efef;
-    --content-secondary-default: #aba6a6;
-    --content-secondary-hover: #bfbbbb;
-    --content-tertiary-default: #0f0003;
-    --content-quaternary-default: #bfbbbb;
-
-    --content-accent-default: #f792a9;
-    --content-action-default: #f0efef;
-    --content-action-hover: #f0efef;
-
-    /*darkmode-link-colors*/
-    --content-link-default: #89b2e1;
-    --content-link-hover: #4783b8;
-
-    /*darkmode-background-colors*/
-    --background-primary-default: #160d10;
-    --background-primary-hover: #2D2023;
-    --background-secondary-default: #2D2023;
-    --background-secondary-hover: #392D30;
-
-    --background-success-default: #a4efc2;
-
-    --background-accent-default: #f792a9;
-    --background-accent-hover: #F57A96;
-
-    /*darkmode-overlay-color*/
-    --overlay-primary-initial-default: rgb(240 239 239 /0%);
-    --overlay-primary-final-default: rgb(240 239 239 /40%);
-
-    /*darkmode-border-colors*/
-    --border-primary-default: #2d2023;
-    --border-secondary-default: #392d30;
-    --border-tertiary-default: #f0efef;
-    
-    --border-accent-default: #f792a9;
-    --border-link-default: #89b2e1;
-
-    /*darkmode-scrollbar-gutter-color*/
-    --scroll-gutter-background: #6D686A;
+    /*darkmode-colors*/
+    --yloria-01: #F0EFEF;
+    --yloria-02: #BFBBBB;
+    --yloria-03: #ABA6A6;
+    --yloria-04: #6D686A;
+    --orbis-01: #0F0003;
+    --orbis-02: #2D2023;
+    --orbis-03: #392D30;
+    --orbis-04: #6D686A;
+    --orbis-05: rgb(240 239 239 /0%);
+    --orbis-06: rgb(240 239 239 /40%);
+    --novara-01: #89B2E1;
+    --novara-02: #4783B8;
+    --nexis-01: #A4EFC2;
+    --zenithar-01: #F792A9;
+    --zenithar-02: #F57A96;
 }
 
 /*Global properties*/
@@ -913,7 +896,7 @@ section:nth-child(n+2):not(:last-child) article {
     }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-zenitharuced-motion) {
     * {
         -webkit-animation: none !important;
                 animation: none !important;
