@@ -56,8 +56,8 @@
     --border-secondary-default: var(--yloria-01);
     --border-accent-default: var(--zenithar-01);
 
-    --overlay-primary-initial-default: var(--orbis-05);
-    --overlay-primary-final-default: var(--orbis-06);
+    --overlay-primary-initial-default: var(--yloria-05);
+    --overlay-primary-final-default: var(--yloria-06);
 
     --scroll-gutter-background: var(--yloria-04);
 }
@@ -108,12 +108,12 @@
     --yloria-02: #444040;
     --yloria-03: #595454;
     --yloria-04: #403E3E;
+    --yloria-05: rgb(16 15 15 /0%);
+    --yloria-06: rgb(16 15 15 /80%);
     --orbis-01: #FFFAFB;
     --orbis-02: #F2E8EB;
     --orbis-03: #E0D2D6;
     --orbis-04: #D2C6C9;
-    --orbis-05: rgb(16 15 15 /0%);
-    --orbis-06: rgb(16 15 15 /80%);
     --novara-01: #214E83;
     --novara-02: #4184BE;
     --nexis-01: #0C612E;
@@ -127,12 +127,12 @@
     --yloria-02: #BFBBBB;
     --yloria-03: #ABA6A6;
     --yloria-04: #6D686A;
+    --yloria-05: rgb(240 239 239 /0%);
+    --yloria-06: rgb(240 239 239 /40%);
     --orbis-01: #160D10;
     --orbis-02: #2D2023;
     --orbis-03: #392D30;
     --orbis-04: #6D686A;
-    --orbis-05: rgb(240 239 239 /0%);
-    --orbis-06: rgb(240 239 239 /40%);
     --novara-01: #89B2E1;
     --novara-02: #4783B8;
     --nexis-01: #A4EFC2;
