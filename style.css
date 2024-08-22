@@ -36,12 +36,9 @@
     /*colors*/
     --content-primary-default: var(--yloria-01);
     --content-secondary-default: var(--yloria-03);
-    --content-secondary-hover: var(--yloria-02);/**/
     --content-tertiary-default: var(--orbis-01);
     --content-quaternary-default: var(--yloria-02);
     --content-accent-default: var(--zenithar-01);
-    --content-action-default: var(--yloria-01);
-    --content-action-hover: var(--yloria-01);
     --content-link-default: var(--novara-01);
     --content-link-hover: var(--novara-02);
 
@@ -462,7 +459,7 @@ input:checked + .slider:before {
     text-decoration: none;
     padding: 0.125rem 0.5rem;
     border-radius: 2rem;
-    color: var(--content-action-default);
+    color: var(--content-primary-default);
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
             transition: var(--base-transition);
@@ -874,7 +871,6 @@ section:nth-child(n+2):not(:last-child) article {
 
     .copy-button:hover {
         background: var(--background-secondary-hover);
-        color: var(--content-action-hover);
     }
 
     .slider:hover {
