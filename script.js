@@ -174,3 +174,45 @@ dialog.addEventListener("click", (event) => {
         closeModal();
     }
 });
+
+
+
+
+
+
+    // Función genérica para cargar los datos
+function renderContent(data) {
+    // Selecciona todos los elementos con el atributo data-key
+    const elements = document.querySelectorAll('[data-key]');
+    
+    // Itera sobre cada elemento y le asigna el valor del JSON
+    elements.forEach(element => {
+      const key = element.getAttribute('data-key'); // Obtiene la key del data-key
+      const value = getValueFromKey(data, key); // Obtiene el valor del JSON correspondiente a la key
+  
+      if (value) {
+        element.textContent = value;
+      }
+    });
+  }
+  
+  // Función para obtener el valor de un objeto anidado dado un string key
+  function getValueFromKey(obj, key) {
+    return key.split('.').reduce((acc, part) => acc && acc[part], obj);
+  }
+  
+  // Cargar el archivo JSON
+  fetch('crowdin/es/content.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el archivo JSON');
+      }
+      return response.json();
+    })
+    .then(data => {
+      renderContent(data);
+    })
+    .catch(error => {
+      console.error('Error al cargar el archivo JSON:', error);
+    });
+  
