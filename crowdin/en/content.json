@@ -1,11 +1,9 @@
 {
-    "paragraph.aboutMe.intro": {
-        "text": "My goal is to create solutions that contribute to improving the surrounding environment, try to make people's lives more comfortable and have a lot of fun in the process."
-    },
-    "paragraph.aboutMe.experience": {
-        "text": "Currently I have been working for more than 2 years as a product designer at Genially although during the last 9 years I have been working on UI design, Design System, Animation, Web Design and Graphic Design projects. Also during 5 of these years I have worked in audiovisual projects as an audiovisual technician, director of photography and camera operator."
-    },
-    "title": {
-        "aboutMe": "About me"
+    "aboutMe": {
+        "title": "About me",
+        "paragraph": {
+            "intro": "My goal is to create solutions that contribute to improving the surrounding environment, try to make people's lives more comfortable and have a lot of fun in the process.",
+            "experience": "Currently I have been working for more than 2 years as a product designer at Genially although during the last 9 years I have been working on UI design, Design System, Animation, Web Design and Graphic Design projects. Also during 5 of these years I have worked in audiovisual projects as an audiovisual technician, director of photography and camera operator."
+        }
     }
 }
