@@ -1,0 +1,10 @@
+{
+    "campaign": {
+        "text": "Email Campaign",
+        "crowdinContext": "An email campaign in the context of marketing."
+    },
+    "lead": {
+        "text": "Lead",
+        "crowdinContext": "Marketing lead."
+    }
+}
