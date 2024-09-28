@@ -538,6 +538,7 @@ input:checked + .slider:before {
 
 /*Info list*/
 .info-list {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

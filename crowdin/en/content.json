@@ -8,5 +8,9 @@
     },
     "coreSkills": {
         "title": "Key skills"
+    },
+    "lang": {
+        "paragraph": "If you prefer, you can change the language of the page to ",
+        "button": "spanish"
     }
 }

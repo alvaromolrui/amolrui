@@ -8,5 +8,9 @@
     },
     "coreSkills": {
         "title": "Competencias básicas"
+    },
+    "lang": {
+        "paragraph": "Si lo prefieres puedes cambiar el idioma de la página a ",
+        "button": "inglés"
     }
 }
