@@ -178,84 +178,74 @@ dialog.addEventListener("click", (event) => {
 
 
 
-// Variable para almacenar el idioma actual
-let currentLanguage = 'es'; // Establece español como el idioma predeterminado
-
-// Función para alternar el idioma
-function toggleLanguage() {
-    currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
-    changeLanguage(currentLanguage);
+// Función para cargar el JSON según el idioma
+async function loadLanguage(lang) {
+    const response = await fetch(`/crowdin/${lang}/content.json`);
+    const data = await response.json();
+    updateDOM(data);
+    updateLangAttribute(lang); // Cambia el atributo lang aquí
+    updateActiveButton(lang);  // Actualiza el botón activo
 }
 
-// Cambiar idioma y almacenar en localStorage
-function changeLanguage(language) {
-    localStorage.setItem('selectedLanguage', language); // Guardar el idioma seleccionado
-    loadJsonAndSetLang(language); // Cargar el JSON correspondiente al idioma
-}
-
-// Función para cargar un archivo JSON dinámicamente y establecer el atributo lang
-function loadJsonAndSetLang(language) {
-    fetch(`crowdin/${language}/content.json`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('No se pudo cargar el archivo JSON');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Datos JSON cargados:', data); // Verificar que los datos se carguen correctamente
-            renderContent(data);
-            document.documentElement.lang = language; // Cambiar el atributo lang del <html>
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo JSON:', error);
-        });
-}
-
-// Función para renderizar el contenido en base al archivo JSON
-function renderContent(data) {
+// Actualiza el DOM con los textos del JSON
+function updateDOM(data) {
     const elements = document.querySelectorAll('[data-key]');
-    elements.forEach(element => {
+    elements.forEach((element) => {
         const key = element.getAttribute('data-key');
-        const value = getValueFromKey(data, key);
-        
+        const value = getValueFromKey(data, key); // Obtiene el valor usando la clave
         if (value) {
-            console.log(`Actualizando ${key} con el valor: ${value}`); // Verificar qué valor se está asignando
-            element.textContent = value;
-        } else {
-            console.warn(`No se encontró valor para la clave: ${key}`); // Mensaje de advertencia si no se encuentra el valor
+            element.innerHTML = value; // Asignar HTML directamente
         }
     });
 }
 
-// Función para obtener el valor de un objeto anidado dado un string key
-function getValueFromKey(obj, key) {
-    return key.split('.').reduce((acc, part) => acc && acc[part], obj);
+// Obtiene el valor del objeto JSON a partir de la clave
+function getValueFromKey(data, key) {
+    return key.split('.').reduce((obj, keyPart) => {
+        return obj && obj[keyPart]; // Navega a través del objeto usando la clave
+    }, data);
 }
 
-// Inicializar el idioma al cargar la página
-function initializeLanguage() {
-    const storedLanguage = localStorage.getItem('selectedLanguage');
-    const browserLanguage = navigator.language || navigator.userLanguage;
-    let language = 'es';
+// Cambia el atributo lang de la etiqueta html
+function updateLangAttribute(lang) {
+    document.documentElement.setAttribute('lang', lang);
+}
 
-    if (storedLanguage) {
-        language = storedLanguage;
-    } else {
-        if (browserLanguage.startsWith('en')) {
-            language = 'en';
-        } else if (browserLanguage.startsWith('es')) {
-            language = 'es';
+// Actualiza el estado activo del botón de idioma
+function updateActiveButton(lang) {
+    const buttons = document.querySelectorAll('.lang-selector .lang-button');
+    buttons.forEach((button) => {
+        const buttonLang = button.id === 'en-button' ? 'en' : 'es';
+        if (buttonLang === lang) {
+            button.classList.add('lang-button-active');  // Añadir clase activa al botón seleccionado
+            button.setAttribute('disabled', true);        // Deshabilitar el botón activo
+            button.setAttribute('tabindex', '-1');        // Hacer que no sea focuseable con el teclado
+        } else {
+            button.classList.remove('lang-button-active'); // Quitar clase activa de los demás botones
+            button.removeAttribute('disabled');            // Hacer clicables los demás botones
+            button.setAttribute('tabindex', '0');          // Hacer focuseables los demás botones
         }
-        localStorage.setItem('selectedLanguage', language);
-    }
-
-    currentLanguage = language;
-    loadJsonAndSetLang(language);
+    });
 }
 
-// Asigna el evento al botón de alternar idioma
-document.getElementById('toggle-lang').addEventListener('click', toggleLanguage);
+// Función para establecer el idioma por defecto
+function setDefaultLanguage() {
+    const userLang = navigator.language || navigator.userLanguage; 
+    const defaultLang = userLang.startsWith('es') ? 'es' : 'en';
+    return defaultLang;
+}
 
-// Inicializar el idioma cuando se carga la página
-initializeLanguage();
+// Cargar el idioma preferido o el idioma por defecto
+const preferredLanguage = localStorage.getItem('preferredLanguage') || setDefaultLanguage();
+loadLanguage(preferredLanguage);
+
+// Añadir eventos a los botones
+document.getElementById('en-button').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'en');
+    loadLanguage('en');
+});
+
+document.getElementById('es-button').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'es');
+    loadLanguage('es');
+});

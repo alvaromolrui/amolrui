@@ -1,16 +1,51 @@
 {
-    "aboutMe": {
-        "title": "Sobre mi",
-        "paragraph": {
-            "intro": "Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.",
-            "experience": "Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, de Sistema de diseño, Animación, Diseño Web y Diseño gráfico. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara."
-        }
-    },
-    "coreSkills": {
-        "title": "Competencias básicas"
+    "header": {
+        "title": "Currículum Vitae"
     },
     "lang": {
-        "paragraph": "Si lo prefieres puedes cambiar el idioma de la página a ",
-        "button": "inglés"
+        "es": "Español",
+        "en": "English"
+    },
+    "coreSkills": {
+        "title": "Competencias básicas",
+        "ux": "Experiencia de usuario",
+        "ui": "Interfaz de usuario",
+        "animation": "Animación",
+        "ixd": "Diseño de interacción",
+        "ia": "Arquitectura de la información",
+        "research": "Investigación de usuario",
+        "wireframing": "Esquematización de ideas"
+    },
+    "button": {
+        "contact": "Ir a datos de contacto<span class='icon' aria-hidden='true'> ↓</span>"
+    },
+    "section": {
+        "about": {
+            "title": "Sobre mi",
+            "header": "<span class='emoji' aria-label='¡Hola!'>&#128075; </span>Soy Álvaro Molina, <i class='accent-color regular-weight'>diseñador de producto</i>",
+            "paragraph": {
+                "intro": "Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.",
+                "experience": "Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, de Sistema de diseño, Animación, Diseño Web y Diseño gráfico. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara."
+            }
+        },
+        "experience": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experiencia",
+            "subtitle": {
+                "current": "Puesto actual",
+                "previous": "Experiencias anteriores"
+            }        
+        },
+        "volunteer": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128080; </span>Voluntariado"
+        },
+        "education": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128214; </span>Educación y Cursos formativos"
+        },
+        "acknowledgements": {
+            "title": "<span class='emoji' aria-hidden='true'>&#127881; </span>Premios"
+        },
+        "contact": {
+            "title": "<span class='emoji' aria-hidden='true'>&#129309; </span>¿Hablamos!"
+        }
     }
 }

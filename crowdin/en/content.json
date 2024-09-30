@@ -1,16 +1,51 @@
 {
-    "aboutMe": {
-        "title": "About me",
-        "paragraph": {
-            "intro": "My goal is to create solutions that contribute to improving the surrounding environment, try to make people's lives more comfortable and have a lot of fun in the process.",
-            "experience": "Currently I have been working for more than 2 years as a product designer at Genially although during the last 9 years I have been working on UI design, Design System, Animation, Web Design and Graphic Design projects. Also during 5 of these years I have worked in audiovisual projects as an audiovisual technician, director of photography and camera operator."
-        }
-    },
-    "coreSkills": {
-        "title": "Key skills"
+    "header": {
+        "title": "Curriculum Vitae"
     },
     "lang": {
-        "paragraph": "If you prefer, you can change the language of the page to ",
-        "button": "spanish"
+        "es": "Español",
+        "en": "English"
+    },
+    "coreSkills": {
+        "title": "Core Skills",
+        "ux": "User Experience",
+        "ui": "User Interface",
+        "animation": "Animation",
+        "ixd": "Interaction Design",
+        "ia": "Information Architecture",
+        "research": "User Research",
+        "wireframing": "Wireframing Ideas"
+    },
+    "button": {
+        "contact": "Go to contact details<span class='icon' aria-hidden='true'> ↓</span>"
+    },
+    "section": {
+        "about": {
+            "title": "About Me",
+            "header": "<span class='emoji' aria-label='Hello!'>&#128075; </span>I'm Álvaro Molina, <i class='accent-color regular-weight'>product designer</i>",
+            "paragraph": {
+                "intro": "My goal is to create solutions that help improve the environment around us, make people's lives more comfortable, and enjoy the process a lot.",
+                "experience": "I have been working as a product designer at Genially for over 2 years now, although for the last 9 years I have faced UI design, design systems, animation, web design, and graphic design projects. Additionally, for 5 of these years, I have worked on audiovisual projects as an audiovisual technician, director of photography, and camera operator."
+            }
+        },
+        "experience": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experience",
+            "subtitle": {
+                "current": "Current Position",
+                "previous": "Previous Experiences"
+            }
+        },
+        "volunteer": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128080; </span>Volunteering"
+        },
+        "education": {
+            "title": "<span class='emoji' aria-hidden='true'>&#128214; </span>Education and Training Courses"
+        },
+        "acknowledgements": {
+            "title": "<span class='emoji' aria-hidden='true'>&#127881; </span>Awards"
+        },
+        "contact": {
+            "title": "<span class='emoji' aria-hidden='true'>&#129309; </span>Shall we talk!"
+        }
     }
 }

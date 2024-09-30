@@ -27,7 +27,12 @@
 
 <header aria-labelledby="header" class="container">
 
-    <h1 id="header" class="small-title small-title-margin regular-weight content-secondary">Currículum vitae</h1>
+    <div aria-label="Selector de idioma" class="lang-selector">
+        <button title="Cambiar idioma a Español" id="es-button" class="lang-button" data-key="lang.es"></button>
+        <button title="Change language to English" id="en-button" class="lang-button" data-key="lang.en"></button>
+    </div>
+
+    <h1 id="header" class="small-title small-title-margin regular-weight content-secondary" data-key="header.title"></h1>
 
 </header>
 
@@ -36,29 +41,29 @@
     <!--About me-->
     <section aria-labelledby="about" class="container">
 
-        <h2 id="introduction" class="big-title big-title-margin"><span class="emoji" aria-label="¡Hola!">&#128075; </span>Soy Álvaro Molina, <i class="accent-color regular-weight">diseñador de producto</i></h2>
+        <h2 id="introduction" class="big-title big-title-margin" data-key="section.about.header"></h2>
 
         <article aria-label="Resumen sobre mi y competencias básicas" class="container">
 
-            <h3 id="about" class="basic-subtitle basic-subtitle-margin" data-key="aboutMe.title"></h3>
-            <p class="basic-paragraph basic-paragraph-margin" data-key="aboutMe.paragraph.intro"></p>
-            <p class="basic-paragraph basic-paragraph-margin" data-key="aboutMe.paragraph.experience"></p>
+            <h3 id="about" class="basic-subtitle basic-subtitle-margin" data-key="section.about.title"></h3>
+            <p class="basic-paragraph basic-paragraph-margin" data-key="section.about.paragraph.intro"></p>
+            <p class="basic-paragraph basic-paragraph-margin" data-key="section.about.paragraph.experience"></p>
 
             <h3 class="basic-subtitle basic-subtitle-margin" data-key="coreSkills.title"></h3>
             <ul class="tag-group basic-paragraph">
-                <li class="tag">Experiencia de usuario</li>
-                <li class="tag">Interfaz de usuario</li>
-                <li class="tag">Animación</li>
-                <li class="tag">Diseño de interacción</li>
-                <li class="tag">Arquitectura de la información</li>
-                <li class="tag">Investigación de usuario</li>
+                <li class="tag" data-key="coreSkills.ux"></li>
+                <li class="tag" data-key="coreSkills.ui"></li>
+                <li class="tag" data-key="coreSkills.animation"></li>
+                <li class="tag" data-key="coreSkills.ixd"></li>
+                <li class="tag" data-key="coreSkills.ia"></li>
+                <li class="tag" data-key="coreSkills.research"></li>
             </ul>
 
         </article>
 
         <nav aria-labelledby="go-to-contact" class="container">
 
-            <a id="go-to-contact" class="nav-button align-right basic-paragraph" href="#info" rel="noopener noreferrer" aria-label="Desplazarse a la sección con los datos de contacto" title="Desplazarse directamente a la sección con los datos de contacto">Ir a datos de contacto<span class="icon" aria-hidden="true"> ↓</span></a>
+            <a id="go-to-contact" class="nav-button align-right basic-paragraph" href="#info" rel="noopener noreferrer" aria-label="Desplazarse a la sección con los datos de contacto" title="Desplazarse directamente a la sección con los datos de contacto" data-key="button.contact"></a>
 
         </nav>
 
@@ -67,9 +72,9 @@
     <!--Experience-->
     <section aria-labelledby="experience" class="container">
 
-        <h2 id="experience" class="basic-title basic-title-margin text-ellipsis"><span class="emoji" aria-hidden="true">&#128188; </span>Experiencia</h2>
+        <h2 id="experience" class="basic-title basic-title-margin text-ellipsis" data-key="section.experience.title"></h2>
 
-            <h3 class="big-subtitle big-subtitle-margin content-secondary">Puesto actual</h3>
+            <h3 class="big-subtitle big-subtitle-margin content-secondary" data-key="section.experience.subtitle.current"></h3>
 
             <article aria-labelledby="role01" class="container highlighted">
 
@@ -92,7 +97,7 @@
 
             </article>
 
-            <h3 class="big-subtitle big-subtitle-margin content-secondary">Experiencias anteriores</h3>
+            <h3 class="big-subtitle big-subtitle-margin content-secondary" data-key="section.experience.subtitle.previous"></h3>
 
             <article aria-labelledby="role02" class="container">
 
@@ -180,7 +185,7 @@
     <!--Volunteer-->
     <section aria-labelledby="volunteer" class="container">
 
-        <h2 id="volunteer" class="basic-title basic-title-margin text-ellipsis"><span class="emoji" aria-hidden="true">&#128080; </span>Voluntariado</h2>
+        <h2 id="volunteer" class="basic-title basic-title-margin text-ellipsis" data-key="section.volunteer.title"></h2>
 
             <h3 class="big-subtitle big-subtitle-margin content-secondary">Colaboración en curso</h3>
 
@@ -225,7 +230,7 @@
     <!--Education-->
     <section aria-labelledby="education" class="container">
 
-        <h2 id="education" class="basic-title basic-title-margin"><span class="emoji" aria-hidden="true">&#128214; </span>Educación y Cursos formativos</h2>
+        <h2 id="education" class="basic-title basic-title-margin" data-key="section.education.title"></h2>
 
             <h3 class="big-subtitle big-subtitle-margin content-secondary">Formación en progreso</h3>
 
@@ -324,7 +329,7 @@
     <!--Acknowledgements-->
     <section aria-labelledby="acknowledgements" class="container">
 
-        <h2 id="acknowledgements" class="basic-title basic-title-margin text-ellipsis"><span class="emoji" aria-hidden="true">&#127881; </span>Premios</h2>
+        <h2 id="acknowledgements" class="basic-title basic-title-margin text-ellipsis" data-key="section.acknowledgements.title"></h2>
 
         <article aria-labelledby="award01" class="container highlighted">
 
@@ -339,7 +344,7 @@
     <!--Contact-->
     <section aria-labelledby="info" class="container">
 
-        <h2 id="info" class="basic-title basic-title-margin"><span class="emoji" aria-hidden="true">&#129309; </span>¿Hablamos?</h2>
+        <h2 id="info" class="basic-title basic-title-margin" data-key="section.contact.title"></h2>
 
         <article aria-label="Datos de contacto" class="container"> 
 
@@ -404,10 +409,6 @@
 
         <li class="info-list-item" aria-labelledby="privacy-notes">
             <p id="privacy-notes" aria-label="Notas sobre transparencia en el uso de datos."><button class="link" id="openDialog" title="Abrir ventana">Ver nota<span class="icon" aria-hidden="true">&nbsp;▢</span></button> sobre transparencia en el uso de datos.</p>
-        </li>
-
-        <li class="info-list-item" aria-labelledby="change-lang">
-            <p id="change-lang" aria-label="Cambiar el idioma de la web" data-key="lang.paragraph"></p><a class="link" id="toggle-lang" title="Cambiar idioma" href="#home" data-key="lang.button"></a>
         </li>
 
     </ul>

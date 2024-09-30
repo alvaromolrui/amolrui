@@ -481,6 +481,26 @@ input:checked + .slider:before {
     pointer-events: none;
 }
 
+.lang-button {
+    gap: 0.5rem;
+    cursor: pointer;
+    background: var(--background-secondary-default);
+    text-decoration: none;
+    padding: 0rem 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--content-primary-default);
+    -webkit-transition: var(--base-transition);
+         -o-transition: var(--base-transition);
+            transition: var(--base-transition);
+    vertical-align: middle;
+}
+
+.lang-button-active {
+    pointer-events: none;
+    background: var(--background-accent-default);
+    color: var(--content-tertiary-default)
+}
+
 /*List*/
 .list {
     padding-left: 2rem;
@@ -651,6 +671,24 @@ section {
     margin: 2rem 0rem 2rem -4rem;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
+}
+
+/*Lang selector*/
+.lang-selector {
+    width: auto;
+    border-radius: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0.25rem;
+    gap: 0.5rem;
+    background: var(--background-secondary-default);
 }
 
 /*Dialog*/
@@ -874,6 +912,10 @@ section:nth-child(n+2):not(:last-child) article {
         background: var(--background-secondary-hover);
     }
 
+    .lang-button:hover {
+        background: var(--background-secondary-hover);
+    }
+
     .slider:hover {
         background-color: var(--background-accent-hover);
     }
@@ -881,7 +923,6 @@ section:nth-child(n+2):not(:last-child) article {
     .slider:hover::before {
         transform: scale(1.1);
     }
-
 
     input:checked + .slider:hover {
         background-color: var(--background-accent-hover);
