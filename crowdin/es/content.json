@@ -6,46 +6,73 @@
         "es": "Español",
         "en": "English"
     },
-    "coreSkills": {
-        "title": "Competencias básicas",
-        "ux": "Experiencia de usuario",
-        "ui": "Interfaz de usuario",
-        "animation": "Animación",
-        "ixd": "Diseño de interacción",
-        "ia": "Arquitectura de la información",
-        "research": "Investigación de usuario",
-        "wireframing": "Esquematización de ideas"
+    "subheader": {
+        "description": "Descripción",
+        "skills": "Compentencias básicas"
     },
     "button": {
         "contact": "Ir a datos de contacto<span class='icon' aria-hidden='true'> ↓</span>"
     },
-    "section": {
-        "about": {
-            "title": "Sobre mi",
-            "header": "<span class='emoji' aria-label='¡Hola!'>&#128075; </span>Soy Álvaro Molina, <i class='accent-color regular-weight'>diseñador de producto</i>",
-            "paragraph": {
-                "intro": "Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.",
-                "experience": "Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, de Sistema de diseño, Animación, Diseño Web y Diseño gráfico. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara."
-            }
+    "about": {
+        "header": "<span class='emoji' aria-label='¡Hola!'>&#128075; </span>Soy Álvaro Molina, <i class='accent-color regular-weight'>diseñador de producto</i>",
+        "subheader": "Sobre mi",
+        "intro": "Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.",
+        "description": "Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, de Sistema de diseño, Animación, Diseño Web y Diseño gráfico. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara."
+    },
+    "experience": {
+        "header": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experiencia",
+        "subheader": {
+            "current": "Puesto actual",
+            "previous": "Experiencias anteriores"
         },
-        "experience": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experiencia",
-            "subtitle": {
-                "current": "Puesto actual",
-                "previous": "Experiencias anteriores"
-            }        
+        "current": {
+            "position": "Diseñador de producto en <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Genially'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Enero 2022 - Actualidad (Remoto)</i>",
+            "description": "Enfocado en facilitar la creación de experiencias comunicativas diferenciadoras en el ámbito formativo, académico y profesional, a través del uso de efectos, interactividad y animación, planteando soluciones para la experiencia e interfaz de usuario llevando a cabo un proceso de diseño completo, involucrándome desde la detección de oportunidades hasta la evaluación de las soluciones tras la implementación."
         },
-        "volunteer": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128080; </span>Voluntariado"
+        "previous": {
+            "position": "Diseñador de IU & Sistema de diseño en <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Genially'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Julio 2020 - Enero 2022 (Remoto)</i>",
+            "description": "Creando las bases del sistema de diseño, documentando, diseñando los componentes fundamentales y definiendo patrones básicos de diseño, buscando la máxima escalabilidad y con gran atención a la viabilidad de implementación dado que hasta el momento no existía sistema de diseño. Además durante esta etapa estuve participando en el diseño de la página web construyendo un sistema modular que permitiera al equipo de contenidos crear páginas a través de un content manager personalizado. También participé rediseñando diferentes partes de la IU de la aplicación."
         },
-        "education": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128214; </span>Educación y Cursos formativos"
+        "graphicDesigner": {
+            "position": "Diseñador gráfico en Genially ↗",
+            "dates": "Junio 2019 - Julio 2020 (Córdoba)",
+            "description": "Creando diseños para plantillas de creaciones de diferentes temáticas..."
         },
-        "acknowledgements": {
-            "title": "<span class='emoji' aria-hidden='true'>&#127881; </span>Premios"
+        "freelanceDesigner": {
+            "position": "Diseñador gráfico independiente",
+            "dates": "Enero 2018 - Noviembre 2021",
+            "description": "Creando marcas e identidades visuales corporativas, haciendo diseño editorial y motion graphics..."
         },
-        "contact": {
-            "title": "<span class='emoji' aria-hidden='true'>&#129309; </span>¿Hablamos!"
+        "freelanceAudiovisual": {
+            "position": "Profesional Audiovisual independiente",
+            "dates": "Febrero 2014 - Junio 2019",
+            "description": "Trabajando como director de fotografía y operador de cámara en proyectos de cine, publicidad..."
         }
+    },
+    "skills": {
+        "userExperience": "Experiencia de usuario",
+        "userInterface": "Interfaz de usuario",
+        "interactionDesign": "Diseño de interacción",
+        "userFlows": "Flujos de usuario",
+        "wireframing": "Esquematización de ideas",
+        "informationArchitecture": "Arquitectura de la información",
+        "userResearch": "Investigación de usuario",
+        "designSystem": "Sistema de diseño",
+        "animation": "Animación",
+        "graphicDesign": "Diseño gráfico",
+        "contentManagement": "Gestión de contenidos",
+        "visualIdentity": "Identidad visual",
+        "webDesign": "Diseño web",
+        "webLayout": "Maquetación web",
+        "posterDesign": "Cartelería",
+        "cameraOperation": "Operación de cámara",
+        "cinematography": "Dirección de fotografía",
+        "colorGrading": "Etalonaje",
+        "videoEditing": "Montaje de vídeo",
+        "storyboarding": "Guión gráfico",
+        "lightingSetup": "Esquemas de iluminación",
+        "postProduction": "Posproducción"
     }
 }

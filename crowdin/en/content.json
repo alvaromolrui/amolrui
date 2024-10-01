@@ -6,46 +6,73 @@
         "es": "Español",
         "en": "English"
     },
-    "coreSkills": {
-        "title": "Core Skills",
-        "ux": "User Experience",
-        "ui": "User Interface",
-        "animation": "Animation",
-        "ixd": "Interaction Design",
-        "ia": "Information Architecture",
-        "research": "User Research",
-        "wireframing": "Wireframing Ideas"
+    "subheader": {
+        "description": "Description",
+        "skills": "Core Skills"
     },
     "button": {
         "contact": "Go to contact details<span class='icon' aria-hidden='true'> ↓</span>"
     },
-    "section": {
-        "about": {
-            "title": "About Me",
-            "header": "<span class='emoji' aria-label='Hello!'>&#128075; </span>I'm Álvaro Molina, <i class='accent-color regular-weight'>product designer</i>",
-            "paragraph": {
-                "intro": "My goal is to create solutions that help improve the environment around us, make people's lives more comfortable, and enjoy the process a lot.",
-                "experience": "I have been working as a product designer at Genially for over 2 years now, although for the last 9 years I have faced UI design, design systems, animation, web design, and graphic design projects. Additionally, for 5 of these years, I have worked on audiovisual projects as an audiovisual technician, director of photography, and camera operator."
-            }
+    "about": {
+        "header": "<span class='emoji' aria-label='Hello!'>&#128075; </span>I am Álvaro Molina, <i class='accent-color regular-weight'>product designer</i>",
+        "subheader": "About me",
+        "intro": "My goal is to create solutions that contribute to improving the environment around us, try to make people's lives more comfortable, and have a lot of fun during the process.",
+        "description": "I have been working as a product designer at Genially for over 2 years, although for the past 9 years I have worked on UI design, design systems, animation, web design, and graphic design projects. In addition, during 5 of these years, I worked on audiovisual projects as an audiovisual technician, director of photography, and camera operator."
+    },
+    "experience": {
+        "header": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experience",
+        "subheader": {
+            "current": "Current Position",
+            "previous": "Previous Experiences"
         },
-        "experience": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experience",
-            "subtitle": {
-                "current": "Current Position",
-                "previous": "Previous Experiences"
-            }
+        "current": {
+            "position": "Product Designer at <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Go to Genially website'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>January 2022 - Present (Remote)</i>",
+            "description": "Focused on facilitating the creation of distinctive communication experiences in educational, academic, and professional fields through the use of effects, interactivity, and animation, proposing solutions for user experience and interface by carrying out a complete design process, getting involved from identifying opportunities to evaluating solutions after implementation."
         },
-        "volunteer": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128080; </span>Volunteering"
+        "previous": {
+            "position": "UI & Design System Designer at <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Go to Genially website'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>July 2020 - January 2022 (Remote)</i>",
+            "description": "Creating the foundations of the design system, documenting, designing key components, and defining basic design patterns, seeking maximum scalability with a focus on implementation feasibility, as there was no design system before. I also participated in designing the website by building a modular system that allowed the content team to create pages through a custom content manager. Additionally, I was involved in redesigning different parts of the app's UI."
         },
-        "education": {
-            "title": "<span class='emoji' aria-hidden='true'>&#128214; </span>Education and Training Courses"
+        "graphicDesigner": {
+            "position": "Graphic Designer at Genially ↗",
+            "dates": "June 2019 - July 2020 (Córdoba)",
+            "description": "Creating designs for templates in various themes..."
         },
-        "acknowledgements": {
-            "title": "<span class='emoji' aria-hidden='true'>&#127881; </span>Awards"
+        "freelanceDesigner": {
+            "position": "Freelance Graphic Designer",
+            "dates": "January 2018 - November 2021",
+            "description": "Creating brands and corporate visual identities, doing editorial design and motion graphics..."
         },
-        "contact": {
-            "title": "<span class='emoji' aria-hidden='true'>&#129309; </span>Shall we talk!"
+        "freelanceAudiovisual": {
+            "position": "Freelance Audiovisual Professional",
+            "dates": "February 2014 - June 2019",
+            "description": "Working as a director of photography and camera operator in film, advertising projects..."
         }
+    },
+    "skills": {
+        "userExperience": "User Experience",
+        "userInterface": "User Interface",
+        "interactionDesign": "Interaction Design",
+        "userFlows": "User Flows",
+        "wireframing": "Wireframing",
+        "informationArchitecture": "Information Architecture",
+        "userResearch": "User Research",
+        "designSystem": "Design System",
+        "animation": "Animation",
+        "graphicDesign": "Graphic Design",
+        "contentManagement": "Content Management",
+        "visualIdentity": "Visual Identity",
+        "webDesign": "Web Design",
+        "webLayout": "Web Layout",
+        "posterDesign": "Poster Design",
+        "cameraOperation": "Camera Operation",
+        "cinematography": "Cinematography",
+        "colorGrading": "Color Grading",
+        "videoEditing": "Video Editing",
+        "storyboarding": "Storyboarding",
+        "lightingSetup": "Lighting Setup",
+        "postProduction": "Post-production"
     }
 }
