@@ -1,12 +1,316 @@
 {
-    "aboutMe": {
-        "title": "About me",
-        "paragraph": {
-            "intro": "My goal is to create solutions that contribute to improving the surrounding environment, try to make people's lives more comfortable and have a lot of fun in the process.",
-            "experience": "Currently I have been working for more than 2 years as a product designer at Genially although during the last 9 years I have been working on UI design, Design System, Animation, Web Design and Graphic Design projects. Also during 5 of these years I have worked in audiovisual projects as an audiovisual technician, director of photography and camera operator."
+    "metadata": {
+        "title": "Álvaro Molina - Diseñador de producto",
+        "description": {
+            "content": "Este es el currículum vitae de Álvaro Molina, Diseñador de producto. En esta página web podrás encontrar información como mi experiencia, mi formación, las acciones de voluntariado en las que he colaborado o los reconocimientos que he obtenido."
+        },
+        "ico": {
+            "alt": "Icono que representa a una persona de busto"
         }
     },
-    "coreSkills": {
-        "title": "Key skills"
+    "header": {
+        "title": "Currículum Vitae",
+        "switch": {
+            "light": {
+                "ariaLabel": "Esquema de color claro"
+            },
+            "dark": {
+                "ariaLabel": "Esquema de color oscuro"
+            },
+            "label": {
+                "title": "Alterna entre esquema de color oscuro y claro"
+            }
+        }
+    },
+    "lang": {
+        "container": {
+            "ariaLabel": "Selector de idioma"
+        },
+        "es": {
+            "text": "Español",
+            "title": "Cambiar idioma a Español"
+        },
+        "en": {
+            "text": "English",
+            "ariaLabel": "Change language to English"
+        }
+    },
+    "subheader": {
+        "description": "Descripción",
+        "skills": "Compentencias básicas"
+    },
+    "button": {
+        "contact": {
+            "text": "Ir a datos de contacto<span class='icon' aria-hidden='true'> ↓</span>",
+            "ariaLabel": "Desplazarse a la sección con los datos de contacto",
+            "title": "Desplazarse directamente a la sección con los datos de contacto"
+        },
+        "backTop": {
+            "text": "Volver arriba<span class='icon'> ↑</span>",
+            "ariaLabel": "Desplazarse al principio de la página",
+            "title": "Desplazarse al principio de la página"
+        }
+    },
+    "about": {
+        "container": {
+            "ariaLabel": "Resumen sobre mi y competencias básicas"
+        },
+        "header": "<span class='emoji' aria-label='¡Hola!'>&#128075; </span>Soy Álvaro Molina, <i class='accent-color regular-weight'>diseñador de producto</i>",
+        "subheader": "Sobre mi",
+        "intro": "Mi objetivo es crear soluciones que contribuyan a mejorar el entorno que nos rodea, tratar de hacer más cómoda la vida de las personas y disfrutar mucho durante el proceso.",
+        "description": "Actualmente llevo más de 2 años trabajando como diseñador de producto en Genially aunque durante los últimos 9 años me he enfrentado a proyectos de diseño de IU, de Sistema de diseño, Animación, Diseño Web y Diseño gráfico. Además durante 5 de estos años he trabajado en proyectos audiovisuales como técnico audiovisual, director de fotografía y operador de cámara."
+    },
+    "experience": {
+        "header": "<span class='emoji' aria-hidden='true'>&#128188; </span>Experiencia",
+        "subheader": {
+            "current": "Puesto actual",
+            "previous": "Experiencias anteriores",
+            "others": "Otras experiencias"
+        },
+        "current": {
+            "position": "Diseñador de producto en <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Genially'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Enero 2022 - Actualidad (Remoto)</i>",
+            "description": "Enfocado en facilitar la creación de experiencias comunicativas diferenciadoras en el ámbito formativo, académico y profesional, a través del uso de efectos, interactividad y animación, planteando soluciones para la experiencia e interfaz de usuario llevando a cabo un proceso de diseño completo, involucrándome desde la detección de oportunidades hasta la evaluación de las soluciones tras la implementación."
+        },
+        "previous": {
+            "position": "Diseñador de IU & Sistema de diseño en <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Genially'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Julio 2020 - Enero 2022 (Remoto)</i>",
+            "description": "Creando las bases del sistema de diseño, documentando, diseñando los componentes fundamentales y definiendo patrones básicos de diseño, buscando la máxima escalabilidad y con gran atención a la viabilidad de implementación dado que hasta el momento no existía sistema de diseño. Además durante esta etapa estuve participando en el diseño de la página web construyendo un sistema modular que permitiera al equipo de contenidos crear páginas a través de un content manager personalizado. También participé rediseñando diferentes partes de la IU de la aplicación."
+        },
+        "graphicDesigner": {
+            "position": "Diseñador gráfico en <a class='link' href='https://genially.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Genially'>Genially<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Junio 2019 - Julio 2020 (Córdoba)</i>",
+            "description": "Creando diseños para plantillas de creaciones de diferentes temáticas, estéticas y de contenidos, ofrecidas a través del catálogo de plantillas. También trabajé creando colecciones de recursos gráficos ofrecidos en los catálogos de recursos de la aplicación y proponiendo mejoras en la categorización, organización y gestionando todo lo relacionado con la creación y publicación de estos. Además también colaboré con el equipo de marketing en la creación de contenidos visuales para campañas comunicación."
+        },
+        "freelanceDesigner": {
+            "position": "Diseñador gráfico independiente",
+            "dates": "<i>Enero 2018 - Noviembre 2021</i>",
+            "description": "Creando marcas e identidades visuales corporativas, haciendo diseño editorial y haciendo motion graphics. Además también he ilustrado (algo) y he colaborado en algunos proyectos en la parte de diseño y maquetación web."
+        },
+        "freelanceAudiovisual": {
+            "position": "Profesional Audiovisual independiente",
+            "dates": "<i>Febrero 2014 - Junio 2019</i>",
+            "description": "Trabajando como director de fotografía y operador de cámara en proyectos de cine, publicidad, videoclips, vídeos corporativos, conciertos, eventos en directo, etc. También realizando tareas como Editor y Postproductor de vídeo. Y algunos trabajos de fotografía y vídeos en bodas, bautizos y comuniones además de fotografía en eventos."
+        }
+    },
+    "volunteer": {
+        "header": "<span class='emoji' aria-hidden='true'>&#128080; </span>Voluntariado",
+        "subheader": {
+            "current": "Colaboración en curso",
+            "previous": "Colaboraciones anteriores"
+        },
+        "current": {
+            "position": "Colaborador en <a class='link' href='https://www.cicbata.org/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de CiC-Batá'>CiC-Batá<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Junio 2023 - Actualidad (Córdoba)</i>",
+            "description": "Llevando a cabo un proyecto de investigación para encontrar soluciones que faciliten el acceso a la tecnología y la reducción de la brecha digital en personas mayores. <a class='link' href='https://view.genially.com/65d763a85b5dfb0014dd1b29' target='_blank' rel='noopener noreferrer' title='Ir las conclusiones de la investigación'>Ver conclusiones<span class='icon' aria-hidden='true'> ↗</span></a>."
+        },
+        "previous": {
+            "position": "Colaboración con <a class='link' href='https://www.ajdem.org/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de la AJDEM'>AJDEM<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Noviembre 2013 (Jaén)</i>",
+            "description": "Creando el cartel para el Día Nacional de la Esclerosis Múltiple donde pude desarrollar la idea, realizar la sesión fotográfica y componer el cartel."
+        }
+    },
+    "education": {
+        "header": "<span class='emoji' aria-hidden='true'>&#128214; </span>Educación y Cursos formativos",
+        "subheader": {
+            "current": "Formación en progreso",
+            "previous": "Formación anterior",
+            "other": "Otra formación",
+            "microcourses": "Microcursos",
+            "workshops": "Talleres",
+            "languages": "Idiomas",
+            "courses": "Cursos"
+        },
+        "current": {
+            "position": "Grado de Diseño de producto digital <a class='link' href='https://www.designgraduate.com/' target='_blank' rel='noopener noreferrer' title='Ir a la página web de Design Graduate'>Design Graduate<span class='icon' aria-hidden='true'> ↗</span></a>",
+            "dates": "<i>Instituto Tramontana, 2023 - Actualidad (Remoto)</i>",
+            "description": "Titulación no reglada."
+        },
+        "previous": {
+            "position": "EAS de Diseño Gráfico",
+            "dates": "<i>EASD Mateo Inurria, 2015 - 2020 (Córdoba)</i>"
+        },
+        "webInesem": {
+            "position": "Profesional en Diseño Web Avanzado con CSS3",
+            "dates": "<i>INESEM, 2019 (Online)</i>",
+            "description": "Titulación no reglada."
+        },
+        "videoFp": {
+            "position": "CFGS Iluminación, Captación y Tratamiento de imagen",
+            "dates": "<i>IES Auringis, 2013 - 2015 (Jaén)</i>"
+        },
+        "highEducation": {
+            "position": "Bachillerato en Artes plásticas, Diseño e Imagen",
+            "dates": "<i>IES Huarte de San Juan, 2010 - 2013 (Linares)</i>"
+        },
+        "microcourses": {
+            "research": "<b>Investigación ágil para producto digital</b>, <i>Instituto Tramontana, 2023 (Madrid)</i>",
+            "js": "Introducción a la programación en JavaScript, <i>Domestika, 2020 (Online)</i>",
+            "uxWriting": "Introducción al UX Writing, <i>Domestika, 2020 (Online)</i>",
+            "uxDesign": "Introducción al diseño UX, <i>Domestika, 2020 (Online)</i>",
+            "webLayout": "Layout web con CSS Grid, Flexbox y otras técnicas modernas, <i>Domestika, 2020 (Online)</i>",
+            "motionGraphics": "After Effects, expresiones para motion graphics, <i>Domestika, 2019 (Online)</i>",
+            "svgAnimation": "<b>Gráficos vectoriales SVG: ilustrar y animar con código</b>, <i>Domestika, 2019 (Online)</i>",
+            "lightning": "Curso online de Trucos de Iluminación y Producción para Fotógrafos, <i>2014 (Online)</i>",
+            "videoEdition": "Curso presencial de montaje y postproducción de video, <i>UPMJ, 2014 (Jaén)</i>"
+        },
+        "workshops": {
+            "communication": "Mejorando la comunicación con Teresa Suárez, <i>Almanatura, 2024 (Arroyomolinos de León)</i>",
+            "dataDriven": "<b>Data Driven Design</b> con Alfonso Romay, <i>Torresburriel Estudio, 2021 (Online)</i>",
+            "uxWriting": "<b>UX Writing</b> con <i>Mario Ferrer, 2020 (Online)</i>",
+            "visualThinking": "Comunicación visual y Visual Thinking: Piensa mejor y comunica más rápido, <i>Sara Martínez - 5 Palabras, 2020 (Online)</i>"
+        },
+        "languages": {
+            "englishConversation": "<b>Clases de conversación en Inglés</b>, <i>Twenix, Abril 2021 - Actualidad (Online)</i>",
+            "englishB2": "Curso de ingles nivel Upper intermediate (B2), <i>Arena School of English, 2013 (Dublín)</i>"
+        },
+        "courses": {
+            "photoshop": "Adobe Photoshop: 'Maestro en 50h' + 'Pro en 35h' + 'Maestría en dibujo digital', <i>Megacursos.com, 2016 (Online)</i>",
+            "illustrator": "Adobe Illustrator: 'Maestro en 70h' + 'Pro en 35h' + 'Maestría en ilustración vectorial' + 'Maestría en tipografía ilustrada', <i>Megacursos.com, 2016 (Online)</i>"
+        }
+    },
+    "acknowledgements": {
+        "header": "<span class='emoji' aria-hidden='true'>&#127881; </span>Premios",
+        "cinematography": {
+            "award": "Premio a la Mejor Dirección de Fotografía en VI Rodando por Jaén",
+            "dates": "<i>Septiembre 2018 (Jaén)</i>",
+            "description": "Premio expedido por la Diputación de Jaén por el Cortometraje Habitación 205. <a class='link' href='https://jaenaudiovisual.es/palmares-del-vi-rodando-por-jaen/' target='_blank' rel='noopener noreferrer' title='Ir a la página web con la nota de prensa'>Ver nota de prensa<span class='icon' aria-hidden='true'> ↗</span></a>."
+        }
+    },
+    "contact": {
+        "container": {
+            "ariaLabel": "Datos de contacto"
+        },
+        "list": {
+            "ariaLabel": "Lista de enlaces"
+        },
+        "header": "<span class='emoji' aria-hidden='true'>&#129309; </span>¿Hablamos?",
+        "linkedin": {
+            "title": {
+                "text": "<span class='emoji' aria-hidden='true'>&#128100; </span><b>Linkedin</b>: ",
+                "ariaLabel": "Contacto por Linkedin"
+            },
+            "link": {
+                "text": "alvaromolinaruiz<span class='icon' aria-hidden='true'> ↗</span>",
+                "title": "Ir al perfil del Linkedin",
+                "ariaLabel": "Ir al perfil de Linkedin"
+            },
+            "ariaLabel": "Linkedin"
+        },
+        "email": {
+            "title": {
+                "text": "<span class='emoji' aria-hidden='true'>&#128231; </span><b>Correo</b>: ",
+                "ariaLabel": "Contacto por Correo"
+            },
+            "link": {
+                "text": "alvaromolrui@gmail.com<span class='icon' aria-hidden='true'> ↗</span>",
+                "title": "Enviar un correo electrónico",
+                "ariaLabel": "Enviar un correo electrónico"
+            },
+            "ariaLabel": "Correo electrónico"
+        },
+        "phone": {
+            "title": {
+                "text": "<span class='emoji' aria-hidden='true'>&#128241; </span><b>Teléfono</b>: ",
+                "ariaLabel": "Contacto por Teléfono"
+            },
+            "link": {
+                "text": "(+34) 653 26 58 84<span class='icon' aria-hidden='true'> ↗</span>",
+                "title": "Llamar por teléfono",
+                "ariaLabel": "Llamar por teléfono"
+            },
+            "ariaLabel": "Teléfono"
+        },
+        "button": {
+            "default": {
+                "text": "<span class='copy-button-text'><span class='icon' aria-hidden='true'>❏ </span>Copiar</span>",
+                "title": "Copiar al portapapeles",
+                "ariaLabel": "Copiar al portapapeles"
+            },
+            "copied": {
+                "text": "<span class='copy-button-text'><span class='icon' aria-hidden='true'>✔ </span>¡Copiado!</span>",
+                "title": "Copiado al portapapeles",
+                "ariaLabel": "Copiado al portapapeles"
+            }
+        }
+    },
+    "footer": {
+        "list": {
+            "ariaLabel": "Información sobre la web"
+        },
+        "downloadPDFItemlist": {
+            "ariaLabel": "Descarga del currículum en PDF"
+        },
+        "downloadPDF": {
+            "text": "Si quieres puedes <a class='link' href='assets/Álvaro Molina - Diseñador de producto.pdf' download aria-label='' title=''>descargar la versión PDF<span class='icon' aria-hidden='true'> ↴</span></a>.",
+            "ariaLabel": "Descargar la versión PDF del currículum",
+            "title": "Descargar la versión PDF del currículum"
+        },
+        "accesibilityItemlist": {
+            "ariaLabel": "Comentario sobre accesibilidad de la web"
+        },
+        "accesibility": {
+            "text": "Página web creada siguiendo las <a class='link' href='https://www.w3.org/WAI/standards-guidelines/' target='_blank' rel='noopener noreferrer' aria-label='' title=''>WCAG 2<span class='icon' aria-hidden='true'> ↗</span></a>, tratando de garantizar el nivel AAA.",
+            "ariaLabel": "Ir a la página de la W3",
+            "title": "Ir a la página de la W3"
+        },
+        "dataUsageItemlist": {
+            "ariaLabel": "Notas sobre transparencia en el uso de datos"
+        },
+        "dataUsage": {
+            "button": {
+                "text": "Ver nota<span class='icon' aria-hidden='true'>&nbsp;▢</span>",
+                "title": "Abrir ventana"
+            },
+            "content": " sobre transparencia en el uso de datos."
+        },
+        "dialog": {
+            "header": "Uso de datos",
+            "list": {
+                "ariaLabel": "Lista de uso de datos"
+            },
+            "color": {
+                "text": "Solamente se almacenan datos relativos al esquema de color seleccionado por la persona usuaria.",
+                "ariaLabel": "Caso uno"
+            },
+            "tracking": {
+                "text": "No se almacena información personal ni se rastrea la actividad de manera individualizada.",
+                "ariaLabel": "Caso dos"
+            },
+            "cookies": {
+                "text": "Esta web no utiliza cookies.",
+                "ariaLabel": "Caso tres"
+            },
+            "close": "<span class='icon' aria-hidden='true'>✕&nbsp;</span>Cerrar"
+        }
+    },
+    "skills": {
+        "userExperience": "Experiencia de usuario",
+        "userInterface": "Interfaz de usuario",
+        "interactionDesign": "Diseño de interacción",
+        "userFlows": "Flujos de usuario",
+        "wireframing": "Esquematización de ideas",
+        "informationArchitecture": "Arquitectura de la información",
+        "userResearch": "Investigación de usuario",
+        "designSystem": "Sistema de diseño",
+        "animation": "Animación",
+        "graphicDesign": "Diseño gráfico",
+        "contentManagement": "Gestión de contenidos",
+        "visualIdentity": "Identidad visual",
+        "webDesign": "Diseño web",
+        "webLayout": "Maquetación web",
+        "posterDesign": "Cartelería",
+        "cameraOperation": "Operación de cámara",
+        "cinematography": "Dirección de fotografía",
+        "colorGrading": "Etalonaje",
+        "videoEditing": "Montaje de vídeo",
+        "storyboarding": "Guión gráfico",
+        "lightingSetup": "Esquemas de iluminación",
+        "postProduction": "Posproducción",
+        "deskResearch": "Investigación documental",
+        "productIdeation": "Ideación de productos",
+        "interviews": "Entrevistas",
+        "photography": "Fotografía",
+        "photoShooting": "Sesión de fotos"
     }
 }
