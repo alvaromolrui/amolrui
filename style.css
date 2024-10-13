@@ -45,6 +45,7 @@
     --background-primary-default: var(--orbis-01);
     --background-secondary-default: var(--orbis-02);
     --background-secondary-hover: var(--orbis-04);
+    --background-tertiary-default: var(--yloria-01);
     --background-success-default: var(--nexis-01);
     --background-accent-default: var(--zenithar-01);
     --background-accent-hover: var(--zenithar-02);
@@ -486,8 +487,8 @@ input:checked + .slider:before {
     cursor: pointer;
     background: var(--background-secondary-default);
     text-decoration: none;
-    padding: 0rem 0.5rem;
-    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
     color: var(--content-primary-default);
     -webkit-transition: var(--base-transition);
          -o-transition: var(--base-transition);
@@ -497,8 +498,8 @@ input:checked + .slider:before {
 
 .lang-button-active {
     pointer-events: none;
-    background: var(--background-accent-default);
-    color: var(--content-tertiary-default)
+    background: var(--background-tertiary-default);
+    color: var(--content-tertiary-default);
 }
 
 /*List*/
@@ -623,6 +624,11 @@ input:checked + .slider:before {
         align-self: flex-end;
 }
 
+.align-center {
+    -ms-flex-item-align: center;
+        align-self: center;
+}
+
 .text-ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -676,7 +682,6 @@ section {
 /*Lang selector*/
 .lang-selector {
     width: auto;
-    border-radius: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -686,9 +691,8 @@ section {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 0.25rem;
     gap: 0.5rem;
-    background: var(--background-secondary-default);
+    margin-top: 2em;
 }
 
 /*Dialog*/
