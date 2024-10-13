@@ -2,7 +2,7 @@ let languageData = {}; // Variable global para almacenar los textos del JSON
 
 // Función para cargar el JSON según el idioma
 async function loadLanguage(lang) {
-    const response = await fetch(`/crowdin/${lang}/content.json`);
+    const response = await fetch(`/lang/${lang}/content.json`);
     const data = await response.json();
     languageData = data; // Almacena el JSON en la variable global
     updateDOM(data);
