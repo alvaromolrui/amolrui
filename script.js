@@ -1,3 +1,129 @@
+let languageData = {}; // Variable global para almacenar los textos del JSON
+
+// Función para cargar el JSON según el idioma
+async function loadLanguage(lang) {
+    const response = await fetch(`/lang/${lang}/content.json`);
+    const data = await response.json();
+    languageData = data; // Almacena el JSON en la variable global
+    updateDOM(data);
+    updateLangAttribute(lang);
+}
+
+// Actualiza el DOM con los textos del JSON
+function updateDOM(data) {
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach((element) => {
+        const key = element.getAttribute('data-key');
+        const value = getValueFromKey(data, key); // Obtiene el valor usando la clave
+        // Si el valor de texto está disponible, actualiza el contenido
+        if (value && typeof value === 'object') {
+            if (value.text) {
+                element.innerHTML = value.text; // Asignar HTML directamente
+            }
+
+            // Actualiza el atributo aria-label si está disponible
+            if (value.ariaLabel !== undefined) {
+                element.setAttribute('aria-label', value.ariaLabel);
+            }
+            
+            // Actualiza el atributo title si está disponible
+            if (value.title !== undefined) {
+                element.setAttribute('title', value.title);
+            }
+
+            // Actualiza el atributo content si está disponible
+            if (value.content !== undefined) {
+                element.setAttribute('content', value.content);
+            }
+
+            // Actualiza el atributo alt si está disponible
+            if (value.alt !== undefined) {
+                element.setAttribute('alt', value.alt);
+            }
+
+        } else if (value) {
+            // Si no es un objeto, puede ser un texto directo (por ejemplo, "Volver arriba")
+            element.innerHTML = value; // Asignar HTML directamente
+        }
+    });
+}
+
+// Obtiene el valor del objeto JSON a partir de la clave
+function getValueFromKey(data, key) {
+    return key.split('.').reduce((obj, keyPart) => {
+        return obj && obj[keyPart];
+    }, data);
+}
+
+// Cambia el atributo lang de la etiqueta html
+function updateLangAttribute(lang) {
+    document.documentElement.setAttribute('lang', lang);
+}
+
+// Función para establecer el idioma por defecto
+function setDefaultLanguage() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const defaultLang = userLang.startsWith('es') ? 'es' : 'en';
+    return defaultLang;
+}
+
+// Cargar el idioma preferido o el idioma por defecto
+const preferredLanguage = localStorage.getItem('preferredLanguage') || setDefaultLanguage();
+loadLanguage(preferredLanguage);
+
+// Desplegable de selección de idioma
+const languageButton = document.getElementById('languageButton');
+const languageList = document.getElementById('languageList');
+
+// Alternar el desplegable
+languageButton.addEventListener('click', function() {
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';       
+    this.setAttribute('aria-expanded', !isExpanded);
+    languageList.hidden = isExpanded;
+});
+
+// Función para cerrar el desplegable
+function closeDropdown() {
+    languageButton.setAttribute('aria-expanded', false);
+    languageList.hidden = true;
+}
+
+// Cerrar el menú cuando se hace clic fuera
+document.addEventListener('click', function(event) {
+    if (!languageButton.contains(event.target) && !languageList.contains(event.target)) {
+        closeDropdown(); // Cerrar el desplegable al seleccionar
+    }
+});
+
+// Cerrar el menú al pulsar Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeDropdown(); // Cerrar el desplegable al seleccionar
+        languageButton.focus(); // Recuperar el foco en el botón
+    }
+});
+
+// Cerrar el menú al hacer Scroll
+window.addEventListener('scroll', () => {
+    if (languageButton.getAttribute('aria-expanded') === 'true') {
+        closeDropdown();
+    }
+});
+
+// Añadir eventos a los botones de idioma dentro del desplegable
+document.getElementById('languageSelector').addEventListener('click', () => {
+    const currentLang = localStorage.getItem('preferredLanguage') || setDefaultLanguage();
+    if (currentLang  === 'es') {
+        localStorage.setItem('preferredLanguage', 'en');
+        loadLanguage('en');
+    } else if (currentLang  === 'en') {
+        localStorage.setItem('preferredLanguage', 'es');
+        loadLanguage('es');
+    }
+    closeDropdown(); // Cerrar el desplegable al seleccionar
+    languageButton.focus(); // Recuperar el foco en el botón
+});
+
 /*Color scheme*/
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const themeContainer = document.getElementById('themeContainer');
@@ -7,12 +133,13 @@ function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        themeContainer.setAttribute('aria-label', 'Esquema de color oscuro');
+        themeContainer.setAttribute('data-key', 'header.switch.dark');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        themeContainer.setAttribute('aria-label', 'Esquema de color claro');
-    }  
+        themeContainer.setAttribute('data-key', 'header.switch.light');
+    }
+    updateDOM(languageData);
 }
 
 // Add  switch changes event listener
@@ -26,18 +153,19 @@ function initThemePreference() {
     if (storedTheme) {
         document.documentElement.setAttribute('data-theme', storedTheme);
         toggleSwitch.checked = (storedTheme === 'dark');
-        themeContainer.setAttribute('aria-label', storedTheme === 'dark' ? 'Esquema de color oscuro' : 'Esquema de color claro');
+        themeContainer.setAttribute('data-key', storedTheme === 'dark' ? 'header.switch.dark' :  'header.switch.light');
     } else {
         if (prefersDarkScheme) {
             document.documentElement.setAttribute('data-theme', 'dark');
             toggleSwitch.checked = true;
-            themeContainer.setAttribute('aria-label', 'Esquema de color oscuro');
+            themeContainer.setAttribute('data-key', 'header.switch.dark');
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
             toggleSwitch.checked = false;
-            themeContainer.setAttribute('aria-label', 'Esquema de color claro');
+            themeContainer.setAttribute('data-key',  'header.switch.light');
         }
     }
+    updateDOM(languageData);
 }
 
 // Run system preference checking on load
@@ -89,32 +217,51 @@ function cleanUrlText(url) {
 // Success state
 function success(button) {
     toggleButtonClass(button);
-    updateText(button, '<span class="icon" aria-hidden="true">✔ </span>¡Copiado!</span>');
 
-    // Disable button
+    // Cambia el data-key al valor correspondiente al texto de "¡Copiado!"
+    button.setAttribute('data-key', 'contact.button.copied');
+    renderText(button);  // Actualiza el texto del botón según el nuevo data-key
+
+    updateDOM(languageData);
+
+    // Desactiva el botón
     button.setAttribute('aria-disabled', 'true');
 
-    // Disable keyboard interaction
+    // Desactivar la interacción del teclado
     const handleKeydown = function(event) {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
         }
     };
 
-    // Add event listener to keyboard interaction
+    // Añadir el listener para desactivar la interacción
     button.addEventListener('keydown', handleKeydown);
 
-    // Return to default state after 2 seconds
+    // Volver al estado original después de 2 segundos
     setTimeout(() => {
         toggleButtonClass(button);
-        updateText(button, '<span class="icon" aria-hidden="true">❏ </span>Copiar</span>');
 
-        // Enable button
+        // Cambia el data-key de vuelta al valor original
+        button.setAttribute('data-key', 'contact.button.default');
+        renderText(button);  // Actualiza el texto del botón nuevamente
+
+        updateDOM(languageData);
+
+        // Rehabilitar el botón
         button.removeAttribute('aria-disabled');
 
-        // Enable keyboard interaction
+        // Habilitar la interacción del teclado
         button.removeEventListener('keydown', handleKeydown);
     }, 2000);
+}
+
+// Función para renderizar el texto del botón basado en su data-key
+function renderText(button) {
+    const key = button.getAttribute('data-key');
+    const text = getValueFromKey(languageData, key); // Usar languageData
+    if (text) {
+        button.innerHTML = text; // Actualiza el contenido del botón
+    }
 }
 
 // Add success class to the button
