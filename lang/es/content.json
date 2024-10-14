@@ -27,7 +27,7 @@
             "ariaLabel": "Selector de idioma"
         },
         "es": {
-            "text": "Español",
+            "text": "Español<span class='icon' aria-hidden='true'> ▾</span>",
             "title": "Cambiar idioma a Español"
         },
         "en":  {

@@ -496,12 +496,6 @@ input:checked + .slider:before {
     vertical-align: middle;
 }
 
-.lang-button-active {
-    pointer-events: none;
-    background: var(--background-tertiary-default);
-    color: var(--content-tertiary-default);
-}
-
 /*List*/
 .list {
     padding-left: 2rem;
@@ -652,6 +646,26 @@ section {
     border-bottom: var(--base-line);
 }
 
+.header {
+    width: 100%;
+    max-width: 1000px;
+    gap: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 1rem;
+}
+
 .container {
     width: 100%;
     max-width: 1000px;
@@ -681,6 +695,7 @@ section {
 
 /*Lang selector*/
 .lang-selector {
+    position: relative;
     width: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -692,33 +707,56 @@ section {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 0.5rem;
-    margin-top: 2em;
+}
+
+.lang-list {
+    position: absolute;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top:2.5rem;
+    right:0;
+}
+
+.lang-list li {
+    margin-top: 0.5rem;
+}
+
+.lang-list li {
+    list-style-type: none;
 }
 
 /*Dialog*/
-dialog.container {
+.data-dialog.container {
     width: calc(100% - 8rem);
     max-width: 800px;
     gap: 1rem;
     min-height: 18rem;
 }
 
-dialog .list {
+.data-dialog .list {
     overflow: auto;
 }
 
-dialog .item-list:last-child {
+.data-dialog .item-list:last-child {
     margin-bottom: 1rem;
 }
 
-dialog[open] {
+.data-dialog[open] {
     visibility: visible;
     border-radius: 1.5rem;
     -webkit-animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
             animation: dialog-fade-in .2s cubic-bezier(0.4, 0, 0.4, 1) forwards;
 }
 
-dialog {
+.data-dialog {
     background-color: var(--background-secondary-default);
     color: inherit;
     margin: auto;
@@ -808,33 +846,33 @@ dialog {
     }
 }
 
-dialog::-webkit-backdrop {
+.data-dialog::-webkit-backdrop {
     background-color: var(--overlay-primary-initial-default);
     -webkit-transition: var(--base-transition) allow-discrete;
     -o-transition: var(--base-transition) allow-discrete;
     transition: var(--base-transition) allow-discrete;
 }
 
-dialog::backdrop {
+.data-dialog::backdrop {
     background-color: var(--overlay-primary-initial-default);
     -webkit-transition: var(--base-transition) allow-discrete;
     -o-transition: var(--base-transition) allow-discrete;
     transition: var(--base-transition) allow-discrete;
 }
 
-dialog[open]::-webkit-backdrop {
+.data-dialog[open]::-webkit-backdrop {
     background-color: var(--overlay-primary-final-default);
 }
 
-dialog[open]::backdrop {
+.data-dialog[open]::backdrop {
     background-color: var(--overlay-primary-final-default);
 }
 
 @starting-style {
-    dialog[open]::-webkit-backdrop {
+    .data-dialog[open]::-webkit-backdrop {
         background-color: var(--overlay-primary-initial-default);
     }
-    dialog[open]::backdrop {
+    .data-dialog[open]::backdrop {
         background-color: var(--overlay-primary-initial-default);
     }
 }
@@ -958,11 +996,11 @@ section:nth-child(n+2):not(:last-child) article {
         --font-size-small: calc((18 / 16) * 1rem);
     }
 
-    .container {
+    .container, .header {
         max-width: 1400px;
     }
 
-    dialog.container {
+    .data-dialog.container {
         max-width: 1000px;
     }
 }
@@ -1005,17 +1043,17 @@ section:nth-child(n+2):not(:last-child) article {
         padding-left: 1.5rem;
     }
 
-    dialog.container {
+    .data-dialog.container {
         width: 100%;
         margin: auto 0 0 0;
         padding: 3rem 2rem 2rem 2rem;
     }
 
-    dialog button {
+    .data-dialog button {
         width: 100%;
     }
 
-    dialog[open] {
+    .data-dialog[open] {
         border-radius: 1.5rem 1.5rem 0rem 0rem;
     }
 }

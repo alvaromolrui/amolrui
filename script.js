@@ -7,7 +7,7 @@ async function loadLanguage(lang) {
     languageData = data; // Almacena el JSON en la variable global
     updateDOM(data);
     updateLangAttribute(lang);
-    updateActiveButton(lang);
+    updateLanguageSelector(lang); // Actualiza el selector
 }
 
 // Actualiza el DOM con los textos del JSON
@@ -52,7 +52,7 @@ function updateDOM(data) {
 // Obtiene el valor del objeto JSON a partir de la clave
 function getValueFromKey(data, key) {
     return key.split('.').reduce((obj, keyPart) => {
-        return obj && obj[keyPart]; // Navega a través del objeto usando la clave
+        return obj && obj[keyPart];
     }, data);
 }
 
@@ -61,26 +61,9 @@ function updateLangAttribute(lang) {
     document.documentElement.setAttribute('lang', lang);
 }
 
-// Actualiza el estado activo del botón de idioma
-function updateActiveButton(lang) {
-    const buttons = document.querySelectorAll('.lang-selector .lang-button');
-    buttons.forEach((button) => {
-        const buttonLang = button.id === 'en-button' ? 'en' : 'es';
-        if (buttonLang === lang) {
-            button.classList.add('lang-button-active');  // Añadir clase activa al botón seleccionado
-            button.setAttribute('disabled', true);        // Deshabilitar el botón activo
-            button.setAttribute('tabindex', '-1');        // Hacer que no sea focuseable con el teclado
-        } else {
-            button.classList.remove('lang-button-active'); // Quitar clase activa de los demás botones
-            button.removeAttribute('disabled');            // Hacer clicables los demás botones
-            button.setAttribute('tabindex', '0');          // Hacer focuseables los demás botones
-        }
-    });
-}
-
 // Función para establecer el idioma por defecto
 function setDefaultLanguage() {
-    const userLang = navigator.language || navigator.userLanguage; 
+    const userLang = navigator.language || navigator.userLanguage;
     const defaultLang = userLang.startsWith('es') ? 'es' : 'en';
     return defaultLang;
 }
@@ -89,16 +72,53 @@ function setDefaultLanguage() {
 const preferredLanguage = localStorage.getItem('preferredLanguage') || setDefaultLanguage();
 loadLanguage(preferredLanguage);
 
-// Añadir eventos a los botones
-document.getElementById('en-button').addEventListener('click', () => {
+// Desplegable de selección de idioma
+const languageButton = document.getElementById('languageButton');
+const languageList = document.getElementById('languageList');
+
+// Alternar el desplegable
+languageButton.addEventListener('click', function() {
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+    languageList.hidden = isExpanded;
+});
+
+// Cerrar el menú cuando se hace clic fuera
+document.addEventListener('click', function(event) {
+    if (!languageButton.contains(event.target) && !languageList.contains(event.target)) {
+        languageButton.setAttribute('aria-expanded', false);
+        languageList.hidden = true;
+    }
+});
+
+// Añadir eventos a los botones de idioma dentro del desplegable
+document.getElementById('languageButtonEs').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'es');
+    loadLanguage('es');
+});
+
+document.getElementById('languageButtonEn').addEventListener('click', () => {
     localStorage.setItem('preferredLanguage', 'en');
     loadLanguage('en');
 });
 
-document.getElementById('es-button').addEventListener('click', () => {
-    localStorage.setItem('preferredLanguage', 'es');
-    loadLanguage('es');
-});
+// Función para actualizar el botón visible y el contenido del desplegable
+function updateLanguageSelector(lang) {
+    const languageButton = document.getElementById('languageButton');
+    const languageList = document.getElementById('languageList');
+    const langButtonEs = document.getElementById('languageButtonEs');
+    const langButtonEn = document.getElementById('languageButtonEn');
+
+    if (lang === 'es') {
+        languageButton.setAttribute('data-key', value.lang.es); // El botón principal muestra "Español"
+        langButtonEs.style.display = 'none';    // Oculta la opción "Español" en el desplegable
+        langButtonEn.style.display = 'block';   // Muestra la opción "Inglés"
+    } else if (lang === 'en') {
+        languageButton.setAttribute('data-key', value.lang.en); // El botón principal muestra "English"
+        langButtonEs.style.display = 'block';   // Muestra la opción "Español"
+        langButtonEn.style.display = 'none';    // Oculta la opción "Inglés" en el desplegable
+    }
+}
 
 
 /*Color scheme*/
@@ -298,7 +318,3 @@ dialog.addEventListener("click", (event) => {
         closeModal();
     }
 });
-
-
-
-
