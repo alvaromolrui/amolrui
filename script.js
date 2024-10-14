@@ -78,16 +78,30 @@ const languageList = document.getElementById('languageList');
 
 // Alternar el desplegable
 languageButton.addEventListener('click', function() {
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';       
     this.setAttribute('aria-expanded', !isExpanded);
     languageList.hidden = isExpanded;
 });
 
+// Función para cerrar el desplegable
+function closeDropdown() {
+    languageButton.setAttribute('aria-expanded', false);
+    languageList.hidden = true;
+}
+
 // Cerrar el menú cuando se hace clic fuera
 document.addEventListener('click', function(event) {
     if (!languageButton.contains(event.target) && !languageList.contains(event.target)) {
-        languageButton.setAttribute('aria-expanded', false);
-        languageList.hidden = true;
+        closeDropdown(); // Cerrar el desplegable al seleccionar
+        languageButton.focus(); // Recuperar el foco en el botón
+    }
+});
+
+// Cerrar el menú al pulsar Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeDropdown(); // Cerrar el desplegable al seleccionar
+        languageButton.focus(); // Recuperar el foco en el botón
     }
 });
 
@@ -95,25 +109,26 @@ document.addEventListener('click', function(event) {
 document.getElementById('languageButtonEs').addEventListener('click', () => {
     localStorage.setItem('preferredLanguage', 'es');
     loadLanguage('es');
+    closeDropdown(); // Cerrar el desplegable al seleccionar
+    languageButton.focus(); // Recuperar el foco en el botón
 });
 
 document.getElementById('languageButtonEn').addEventListener('click', () => {
     localStorage.setItem('preferredLanguage', 'en');
     loadLanguage('en');
+    closeDropdown(); // Cerrar el desplegable al seleccionar
+    languageButton.focus(); // Recuperar el foco en el botón
 });
 
 // Función para actualizar el botón visible y el contenido del desplegable
 function updateLanguageSelector(lang) {
-    const languageButton = document.getElementById('languageButton');
     const langButtonEs = document.getElementById('languageButtonEs');
     const langButtonEn = document.getElementById('languageButtonEn');
 
     if (lang === 'es') {
-        languageButton.setAttribute('data-key', value.lang.es); // El botón principal muestra "Español"
         langButtonEs.style.display = 'none';    // Oculta la opción "Español" en el desplegable
         langButtonEn.style.display = 'block';   // Muestra la opción "Inglés"
     } else if (lang === 'en') {
-        languageButton.setAttribute('data-key', value.lang.en); // El botón principal muestra "English"
         langButtonEs.style.display = 'block';   // Muestra la opción "Español"
         langButtonEn.style.display = 'none';    // Oculta la opción "Inglés" en el desplegable
     }
