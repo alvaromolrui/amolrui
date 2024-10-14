@@ -26,6 +26,7 @@
         "container": {
             "ariaLabel": "Selector de idioma"
         },
+        "selected": "English<span class='icon' aria-hidden='true'> ▾</span>",
         "es": {
             "text": "Español",
             "title": "Cambiar idioma a Español"

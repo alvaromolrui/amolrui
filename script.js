@@ -105,7 +105,6 @@ document.getElementById('languageButtonEn').addEventListener('click', () => {
 // Función para actualizar el botón visible y el contenido del desplegable
 function updateLanguageSelector(lang) {
     const languageButton = document.getElementById('languageButton');
-    const languageList = document.getElementById('languageList');
     const langButtonEs = document.getElementById('languageButtonEs');
     const langButtonEn = document.getElementById('languageButtonEn');
 

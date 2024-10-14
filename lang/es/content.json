@@ -26,8 +26,9 @@
         "container": {
             "ariaLabel": "Selector de idioma"
         },
+        "selected": "Español<span class='icon' aria-hidden='true'> ▾</span>",
         "es": {
-            "text": "Español<span class='icon' aria-hidden='true'> ▾</span>",
+            "text": "Español",
             "title": "Cambiar idioma a Español"
         },
         "en":  {
