@@ -7,7 +7,6 @@ async function loadLanguage(lang) {
     languageData = data; // Almacena el JSON en la variable global
     updateDOM(data);
     updateLangAttribute(lang);
-    updateLanguageSelector(lang); // Actualiza el selector
 }
 
 // Actualiza el DOM con los textos del JSON
@@ -93,7 +92,6 @@ function closeDropdown() {
 document.addEventListener('click', function(event) {
     if (!languageButton.contains(event.target) && !languageList.contains(event.target)) {
         closeDropdown(); // Cerrar el desplegable al seleccionar
-        languageButton.focus(); // Recuperar el foco en el botón
     }
 });
 
@@ -105,35 +103,26 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Añadir eventos a los botones de idioma dentro del desplegable
-document.getElementById('languageButtonEs').addEventListener('click', () => {
-    localStorage.setItem('preferredLanguage', 'es');
-    loadLanguage('es');
-    closeDropdown(); // Cerrar el desplegable al seleccionar
-    languageButton.focus(); // Recuperar el foco en el botón
-});
-
-document.getElementById('languageButtonEn').addEventListener('click', () => {
-    localStorage.setItem('preferredLanguage', 'en');
-    loadLanguage('en');
-    closeDropdown(); // Cerrar el desplegable al seleccionar
-    languageButton.focus(); // Recuperar el foco en el botón
-});
-
-// Función para actualizar el botón visible y el contenido del desplegable
-function updateLanguageSelector(lang) {
-    const langButtonEs = document.getElementById('languageButtonEs');
-    const langButtonEn = document.getElementById('languageButtonEn');
-
-    if (lang === 'es') {
-        langButtonEs.style.display = 'none';    // Oculta la opción "Español" en el desplegable
-        langButtonEn.style.display = 'block';   // Muestra la opción "Inglés"
-    } else if (lang === 'en') {
-        langButtonEs.style.display = 'block';   // Muestra la opción "Español"
-        langButtonEn.style.display = 'none';    // Oculta la opción "Inglés" en el desplegable
+// Cerrar el menú al hacer Scroll
+window.addEventListener('scroll', () => {
+    if (languageButton.getAttribute('aria-expanded') === 'true') {
+        closeDropdown();
     }
-}
+});
 
+// Añadir eventos a los botones de idioma dentro del desplegable
+document.getElementById('languageSelector').addEventListener('click', () => {
+    const currentLang = localStorage.getItem('preferredLanguage') || setDefaultLanguage();
+    if (currentLang  === 'es') {
+        localStorage.setItem('preferredLanguage', 'en');
+        loadLanguage('en');
+    } else if (currentLang  === 'en') {
+        localStorage.setItem('preferredLanguage', 'es');
+        loadLanguage('es');
+    }
+    closeDropdown(); // Cerrar el desplegable al seleccionar
+    languageButton.focus(); // Recuperar el foco en el botón
+});
 
 /*Color scheme*/
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

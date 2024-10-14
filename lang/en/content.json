@@ -26,14 +26,16 @@
         "container": {
             "ariaLabel": "Language selector"
         },
-        "selected": "English<span class='icon' aria-hidden='true'> ▾</span>",
-        "es": {
-            "text": "Español",
-            "title": "Switch language to Spanish"
+        "selected": {
+            "text": "English<span class='icon' aria-hidden='true'> ▾</span>",
+            "title": "The current language is English"
         },
-        "en":  {
-            "text": "English",
-            "ariaLabel": "Change language to English"
+        "list": {
+            "ariaLabel": "Change web page language"
+        },
+        "button": {
+            "text": "Español",
+            "title": "Cambiar idioma a Español"
         }
     },
     "subheader": {
@@ -236,6 +238,9 @@
         }
     },
     "footer": {
+        "container": {
+            "ariaLabel": "Footer"
+        },
         "list": {
             "ariaLabel": "Information about the website"
         },

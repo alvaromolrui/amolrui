@@ -646,7 +646,7 @@ section {
     border-bottom: var(--base-line);
 }
 
-.header {
+.topbar {
     width: 100%;
     max-width: 1000px;
     gap: 1rem;
@@ -996,7 +996,7 @@ section:nth-child(n+2):not(:last-child) article {
         --font-size-small: calc((18 / 16) * 1rem);
     }
 
-    .container, .header {
+    .container, .topbar {
         max-width: 1400px;
     }
 

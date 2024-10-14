@@ -19,7 +19,7 @@
 
 <!--Header-->
 
-<div class="header">
+<div class="topbar">
 
     <div id="themeContainer" aria-label="" data-key="">
         <label tabindex="0" title="" class="theme-switch" for="checkbox" data-key="header.switch.label">
@@ -29,15 +29,11 @@
     </div>
 
     <div id="lang-selector" aria-label="" class="lang-selector" data-key="lang.container">
-        <button id="languageButton" aria-haspopup="true" aria-expanded="false" class="lang-button" data-key="lang.selected">
-        </button>
+        <button id="languageButton" title="" aria-haspopup="true" aria-expanded="false" class="lang-button" data-key="lang.selected"></button>
     
-        <ul aria-label="" id="languageList" class="list basic-paragraph lang-list" role="menu" aria-labelledby="languageButton" hidden>
+        <ul aria-label="" id="languageList" class="list basic-paragraph lang-list" role="menu" hidden data-key="lang.list">
             <li role="none">
-                <button title="" id="languageButtonEs" class="lang-button" data-key="lang.es"></button>
-            </li>
-            <li role="none">
-                <button title="" id="languageButtonEn" class="lang-button" data-key="lang.en"></button>
+                <button title="" id="languageSelector" class="lang-button" data-key="lang.button"></button>
             </li>
         </ul>
     </div>    
@@ -405,7 +401,7 @@
 </main>
 
 <!--Footer-->
-<footer aria-label="Pie de página" class="container">
+<footer aria-label="" class="container" data-key="footer.container">
 
     <nav aria-labelledby="back-to-top" class="container">
 
