@@ -74,41 +74,99 @@ loadLanguage(preferredLanguage);
 // Desplegable de selección de idioma
 const languageButton = document.getElementById('languageButton');
 const languageList = document.getElementById('languageList');
+const languageSelector = document.getElementById('languageSelector');
 
+// Función para manejar animaciones de entrada y salida
+function toggleVisibility(element, shouldShow) {
+    if (shouldShow) {
+        
+        // Añadir la clase para la animación de entrada
+        setTimeout(() => {
+            element.classList.add('show');
+        }, 10); // Retraso corto para asegurar que la animación se reproduzca
+    } else {
+        // Animación de salida
+        element.classList.remove('show');
+    }
+}
+/*
 // Alternar el desplegable
 languageButton.addEventListener('click', function() {
     const isExpanded = this.getAttribute('aria-expanded') === 'true';       
     this.setAttribute('aria-expanded', !isExpanded);
     languageList.hidden = isExpanded;
+
+   toggleVisibility(languageList, !isExpanded);
+
+   if (!isExpanded) {
+       languageSelector.focus(); // Enfocar el selector si el menú se abre
+   }
+});
+*/
+languageButton.addEventListener('click', function() {
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
+        closeDropdown();
+    } else {
+        openDropdown();
+    }
 });
 
-// Función para cerrar el desplegable
+// Función para abrir el desplegable
+function openDropdown() {
+    languageButton.setAttribute('aria-expanded', true);
+    languageList.hidden = false;
+    toggleVisibility(languageList, true);
+    languageSelector.focus(); // Enfocar el selector al abrir el menú
+}
+
 function closeDropdown() {
     languageButton.setAttribute('aria-expanded', false);
-    languageList.hidden = true;
+    
+    // Ejecutar toggleVisibility antes de ocultar el desplegable
+    toggleVisibility(languageList, false);
+    setTimeout(() => {
+        languageList.hidden = true;
+    }, 100);
+
 }
 
 // Cerrar el menú cuando se hace clic fuera
 document.addEventListener('click', function(event) {
     if (!languageButton.contains(event.target) && !languageList.contains(event.target)) {
-        closeDropdown(); // Cerrar el desplegable al seleccionar
+        closeDropdown();
     }
 });
 
 // Cerrar el menú al pulsar Escape
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
-        closeDropdown(); // Cerrar el desplegable al seleccionar
-        languageButton.focus(); // Recuperar el foco en el botón
+        closeDropdown();
     }
 });
 
 // Cerrar el menú al hacer Scroll
 window.addEventListener('scroll', () => {
     if (languageButton.getAttribute('aria-expanded') === 'true') {
+        languageButton.focus();
         closeDropdown();
     }
 });
+
+// Cerrar el menú al hacer blur de ambos elementos (languageButton y languageSelector)
+function handleBlur(event) {
+    setTimeout(() => {
+        // Verificar si ninguno de los dos elementos tiene el foco
+        if (!languageButton.contains(document.activeElement) && !languageSelector.contains(document.activeElement)) {
+            closeDropdown(); // Cerrar el menú
+        }
+    }, 10); // Pequeño retraso para dar tiempo al evento focus en otros elementos
+}
+
+// Añadir los listeners de blur
+languageButton.addEventListener('blur', handleBlur);
+languageSelector.addEventListener('blur', handleBlur);
 
 // Añadir eventos a los botones de idioma dentro del desplegable
 document.getElementById('languageSelector').addEventListener('click', () => {
@@ -120,8 +178,8 @@ document.getElementById('languageSelector').addEventListener('click', () => {
         localStorage.setItem('preferredLanguage', 'es');
         loadLanguage('es');
     }
-    closeDropdown(); // Cerrar el desplegable al seleccionar
-    languageButton.focus(); // Recuperar el foco en el botón
+    languageButton.focus();
+    closeDropdown();
 });
 
 /*Color scheme*/
