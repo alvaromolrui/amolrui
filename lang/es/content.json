@@ -24,7 +24,7 @@
         },
     "lang": {
         "container": {
-            "ariaLabel": "Selector de idioma"
+            "ariaLabel": "Idioma actual"
         },
         "selected": {
             "text": "Español<span class='icon' aria-hidden='true'> ▾</span>",
