@@ -8,6 +8,9 @@
             "alt": "Icon representing a person bust"
         }
     },
+    "progressBar": {
+        "ariaLabel": "Web page reading progress"
+    },
     "header": {
         "title": "Curriculum Vitae",
         "switch": {

@@ -1,3 +1,19 @@
+// Agregamos un event listener para el evento 'scroll'
+window.addEventListener('scroll', function() {
+    // Calcular la cantidad de scroll
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolledPercentage = (scrollTop / scrollHeight) * 100;
+
+    // Actualizar el ancho de la barra de progreso
+    document.getElementById('bar').style.width = scrolledPercentage + '%';
+
+    // Actualizar el aria-valuenow y aria-valuetext
+    let progressBarContainer = document.getElementById('progressBar');
+    progressBarContainer.setAttribute('aria-valuenow', Math.round(scrolledPercentage));
+    progressBarContainer.setAttribute('aria-valuetext', Math.round(scrolledPercentage) + '%');
+});
+
 let languageData = {}; // Variable global para almacenar los textos del JSON
 
 // Función para cargar el JSON según el idioma

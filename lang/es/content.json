@@ -8,6 +8,9 @@
             "alt": "Icono que representa a una persona de busto"
         }
     },
+    "progressBar": {
+        "ariaLabel": "Progreso de lectura de la página"
+    },
     "header": {
         "title": "Currículum Vitae",
         "switch": {
